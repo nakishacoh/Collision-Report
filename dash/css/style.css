@@ -1,0 +1,164 @@
+/*#board  {
+  width: 16em;
+  background-color: #1982c4;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: fixed;
+}
+
+
+#LOGO {
+  text-align: center;
+  display: block;
+  padding: 5.15em 7em;
+  width: 39px;
+  height: 18.5px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+#FORM {
+  display: block;
+  padding: 4.5em 16px;
+  width: 41.5px;
+  height: 18.5px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+#ACCOUNT {
+	text-align: center;
+  padding: 4.5em 6em;
+  width: 68px;
+  height: 18.5px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+#LOGOUT {
+  text-align: center;
+  padding: 4.5em 6.5em;
+  width: 57.5px;
+  height: 18.5px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+#CONTACT {
+  text-align: center;
+  padding: 4.5em 6em;
+  width: 65px;
+  height: 18.5px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+#FORM{
+  text-align: center;
+  display: block;
+  padding: 4.5em 7em;
+
+}
+
+#sub1{
+  margin-top: 16em;
+  display: none;
+}
+
+#sub2{
+  margin-top: 27em;
+  display: none;
+}
+
+#sub3{
+  margin-top: 38em;
+  display: none;
+}
+#sub4{
+  margin-top: 43em;
+  display: none;
+}
+.sub{
+  position: fixed;
+  text-align: center;
+  width: 150px;
+  border: solid 1px #1982c4;
+  background-color: #ffffff;
+  margin: 0 16em;
+}*/
+
+html, body{
+  height:100%;
+margin:0;
+}
+
+.dash{
+  width:16em;
+}
+
+.content{
+  position: absolute;
+  top: 80px;
+  left: 24em;
+  font-size: 20px;
+  /*width: 200px;
+  height: 100px;*/
+}
+
+.btn{
+  width:120px;
+  height:36px;
+  text-align: center;
+  margin: auto;
+}
+
+.navBack{
+  background-color: #1982C4;
+  height: 100%;
+}
+
+.navBack a{
+  color: white;
+}
+
+.logout{
+  margin-top: 60em;
+  /*margin: 0;*/
+}
