@@ -20,10 +20,13 @@ p{
   width:16em;
 }
 
+
+
 .content{
   position: absolute;
   top: 80px;
-  left: 24em;
+  left: 15em;
+  right: 5em;
   font-size: 1.5em;
   /*width: 200px;
   height: 100px;*/
@@ -38,7 +41,7 @@ p{
 
 .navBack{
   background-color: #1982C4;
-  height: 100%;
+  height: auto;
 }
 
 .navBack a{
@@ -60,9 +63,9 @@ p{
 
 /* Table */
 #v-pills-tabContent table{
-  border-radius: 5px;
-   margin: 0px auto;
-   float: none;
+  /* border-radius: 5px; */
+   /* margin: 0px auto; */
+   /* float: none; */
 }
 
 /* Account Page */
@@ -70,3 +73,9 @@ p{
 #vertical-2 thead, #vertical-2 tbody{
               display:inline-block;
           }
+
+/* Contact */
+#contact {
+  background-image: url("assets/contact.png");
+  padding: 10% 0%;
+}
