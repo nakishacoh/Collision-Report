@@ -58,7 +58,48 @@
   <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
 
   <!-- Account Page -->
-  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+    <h3>General Account Settings</h3>
+
+    <table id="vertical-2">
+               <thead>
+                   <tr>
+                       <th colspan="3">Name</th>
+                   </tr>
+                   <tr>
+                       <th colspan="3">Insurance</th>
+                   </tr>
+                   <tr>
+                       <th colspan="3">Email</th>
+                   </tr>
+                   <tr>
+                       <th colspan="3">Phone Number</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>row 1</td>
+                       <td><button type="button" class="btn btn-primary">Edit</button></td>
+                   </tr>
+                   <tr>
+                       <td>PDF</td>
+                       <td><button type="button" class="btn btn-primary">Edit</button></td>
+
+                   </tr>
+                   <tr>
+                       <td>data</td>
+                       <td><button type="button" class="btn btn-primary">Edit</button></td>
+                   </tr>
+                   <tr>
+                       <td>data</td>
+                       <td><button type="button" class="btn btn-primary">Edit</button></td>
+                   </tr>
+                   <tr>
+                       <td>data</td>
+                       <td><button type="button" class="btn btn-primary">Edit</button></td>
+                   </tr>
+               </tbody>
+  </div>
 
   <!-- Contact Page -->
   <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>

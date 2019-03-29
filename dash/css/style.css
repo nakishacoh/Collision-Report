@@ -64,3 +64,9 @@ p{
    margin: 0px auto;
    float: none;
 }
+
+/* Account Page */
+
+#vertical-2 thead, #vertical-2 tbody{
+              display:inline-block;
+          }
