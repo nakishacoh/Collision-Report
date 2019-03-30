@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+$font: 'Roboto', sans-serif;
+$font-family-sans-serif: $font;
+
+$main-color: #1982C4;
+$primary:$main-color;
+$secondary-color: #707070;
+$secondary-font: 'Montserrat',sans-serif;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.navbar{
+    .nav-link,.navbar-brand{
+        color: white;
+    }
+    .nav-link:hover{
+        text-decoration: underline;
+        text-decoration-color:white;
+    }
+}
+a:hover{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    color:$main-color
+}
+
+p{
+    font-family:$secondary-font;
+    color:$secondary-color;
+  
+}
+.btn{
+    margin-top:5%;
+}
+.btn,a{
+    font-family:$secondary-font;
+}
+
+.bg {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+}
+
+#home{
+    background-image: url("assets/home.png");
+    padding:18% 0%;
+}
+#home{
+    h1,h3{
+        color:white;
+    }
+}
+#home-content{
+    margin:5% 0%;
+}
+#about{
+    padding:10%;
+}
+
+#contact{
+    background-image: url("assets/contact.png");
+    padding:10% 0%
+}
+
+.contact-bkg{
+    background-color: white;
+    color:#707070;
+    padding: 10% 0 10% 3%;
+}
+
+footer{
+    p{
+        color:white;
+    }
+    background-color: $main-color;
+    padding: 4% 0%;
+    a, #footer-content{
+        padding:2% 5% 0% 2%;
+    }
+}
+
+i{
+    color:white;
+    margin-left:5%;
+}
+#footer-content{
+    padding: 5% 0%;
+}
