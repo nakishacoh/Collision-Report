@@ -5,7 +5,11 @@
 html, body{
   height:100%;
   margin:0;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+body{
+  background-color: blue;
 }
 
 h1, h2, h3{
@@ -16,12 +20,26 @@ p{
   font-family: "Montserrat";
 }
 
+.btn{
+  width:120px;
+  height:36px;
+  text-align: inherit;
+  margin: auto;
+}
+
+/* Navigation */
+
+.navBack{
+  background-color: #1982C4;
+  height: auto;
+}
+
 .dash{
-  width:16em;
+  width:17em;
 }
 
 
-
+/* Panel*/
 .content{
   position: absolute;
   top: 80px;
@@ -32,17 +50,9 @@ p{
   height: 100px;*/
 }
 
-.btn{
-  width:120px;
-  height:36px;
-  text-align: center;
-  margin: auto;
-}
 
-.navBack{
-  background-color: #1982C4;
-  height: auto;
-}
+
+
 
 .navBack a{
   color: white;
@@ -78,4 +88,9 @@ p{
 #contact {
   background-image: url("assets/contact.png");
   padding: 10% 0%;
+}
+
+/* Subtitles */
+.hTitle{
+  padding-bottom: 1.5em;
 }
