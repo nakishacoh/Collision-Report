@@ -13,20 +13,20 @@
 
         <!-- navbar -->
         <nav class="navbar fixed-top navbar-expand-lg bg-primary" id="navbar">
-            <a class="navbar-brand" href="#home">LOGO</a>
+            <a class="navbar-brand" href="http://localhost/collision-Report/#home">LOGO</a>
             <button class="navbar-toggler navbar-dark bg-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav justify-content-end " id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="http://localhost/collision-Report/#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="http://localhost/collision-Report/#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#location">Location</a>
+                        <a class="nav-link" href="http://localhost/collision-Report/#location">Location</a>
                     </li>
                 </ul>
             </div>
