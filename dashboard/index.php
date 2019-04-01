@@ -32,7 +32,7 @@
 
 <!-- Home Page -->
 <!-- <h2 class="hTitle">Home</h2> -->
-<div class="tab-pane fade active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+<div class="tab-pane active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
   <h1 class="hTitle">Home</h1>
 
   <table class="table table-bordered tab-pane fade show">
