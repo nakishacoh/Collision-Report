@@ -98,3 +98,15 @@ i{
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+#notesForm,#injuriesForm,#confirmationForm{
+    display: none;
+}
+    
+.formContent{
+    margin: 8%;
+}
+    
+#paginationForms {
+    padding: 3%;
+}
