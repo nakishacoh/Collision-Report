@@ -9747,4 +9747,16 @@ i {
   margin-bottom: 5%;
 }
 
+#notesForm, #injuriesForm, #confirmationForm {
+  display: none;
+}
+
+.formContent {
+  margin: 8%;
+}
+
+#paginationForms {
+  padding: 3%;
+}
+
 /*# sourceMappingURL=main.css.map */

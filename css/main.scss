@@ -10,7 +10,7 @@ $primary:$main-color;
 $secondary-color: #707070;
 $secondary-font: 'Montserrat',sans-serif;
 
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 .navbar{
     .nav-link,.navbar-brand{
