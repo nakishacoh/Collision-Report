@@ -1,0 +1,118 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body{
+  height:100%;
+  margin:0;
+  font-size: 18px;
+}
+
+body{
+  background-color: blue;
+}
+
+h1, h2, h3{
+  font-family: "Roboto";
+}
+
+p{
+  font-family: "Montserrat";
+}
+
+.btn{
+  width:120px;
+  height:36px;
+  text-align: center !important;
+  margin: auto;
+}
+
+html button{
+  background-color: #217eba !important;
+  border-color: #217eba !important
+}
+
+/* Navigation */
+
+.navBack{
+  background-color: #1982C4;
+  height: auto;
+}
+
+.dash{
+  width:17em;
+}
+
+#v-pills-home-tab, #v-pills-profile-tab, #v-pills-messages-tab, #v-pills-settings-tab, #logout{
+  background-color: #217eba !important;
+  color: white;
+  /* background: #217eba !important; */
+
+}
+
+
+
+
+/* Panel*/
+.content{
+  position: absolute;
+  top: 80px;
+  left: 15em;
+  right: 5em;
+  font-size: 1.5em;
+  /*width: 200px;
+  height: 100px;*/
+}
+
+
+
+
+
+.navBack a{
+  color: white;
+}
+
+
+.logout{
+  margin-top: 31em;
+  background-color: #217eba !important;
+  color: white;
+}
+
+/* Logo */
+.alignTitle{
+  padding-left: .5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: white;
+}
+
+/* Table */
+#v-pills-tabContent table{
+  /* border-radius: 5px; */
+   /* margin: 0px auto; */
+   /* float: none; */
+}
+
+/* Account Page */
+
+#vertical-2 thead, #vertical-2 tbody{
+              display:inline-block;
+          }
+
+/* Contact */
+#contact {
+  background-image: url("assets/contact.png");
+  padding: 10% 0%;
+}
+
+/* Subtitles */
+.hTitle{
+  padding-bottom: 1.5em;
+}
+
+/* Hover */
+
+.highlight:hover{
+  background-color: #217eba;
+}
