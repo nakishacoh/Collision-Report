@@ -36,20 +36,30 @@ html button{
 
 .navBack{
   background-color: #1982C4;
-  height: auto;
+  height: 100%;
 }
 
 .dash{
   width:17em;
 }
 
-#v-pills-home-tab, #v-pills-profile-tab, #v-pills-messages-tab, #v-pills-settings-tab, #logout{
+/*#v-pills-home-tab, #v-pills-profile-tab, #v-pills-messages-tab, #v-pills-settings-tab, #logout{
   background-color: #217eba !important;
   color: white;
-  /* background: #217eba !important; */
-
+}*/
+.nav-link{
+  background-color: #217eba !important;
+  color: white;
+}
+.navBack .nav-link:focus{
+   background-color: #707070 !important;
 }
 
+/*#v-pills-tab .nav{
+  background-color: #217eba !important;
+  color: white;
+
+}*/
 
 
 
@@ -65,19 +75,25 @@ html button{
 }
 
 
-
-
-
 .navBack a{
   color: white;
 }
 
 
 .logout{
-  margin-top: 31em;
+  margin-bottom: 0;
   background-color: #217eba !important;
   color: white;
 }
+
+/*.nav a:focus{
+  background-color: #707070 !important;
+}*/
+
+/*a:hover{
+  color:#001240 !important; 
+}*/
+
 
 /* Logo */
 .alignTitle{
