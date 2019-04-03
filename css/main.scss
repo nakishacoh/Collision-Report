@@ -1,43 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-
-$font: 'Roboto', sans-serif;
-$font-family-sans-serif: $font;
-
+$main-font: 'Roboto', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
 $main-color: #1982C4;
-$primary:$main-color;
 $secondary-color: #707070;
-$secondary-font: 'Montserrat',sans-serif;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.navbar{
-    .nav-link,.navbar-brand{
+.navbar {
+    background-color: $main-color !important;
+    .nav-link,.navbar-brand {
         color: white;
     }
-    .nav-link:hover{
+    .nav-link:hover {
         text-decoration: underline;
-        text-decoration-color:white;
+        text-decoration-color: white;
     }
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 }
-h1,h2,h3,h4{
-    color:$main-color
+
+h1, h2, h3, h4 {
+    color: $main-color;
 }
 
-p{
-    font-family:$secondary-font;
-    color:$secondary-color;
+p {
+    font-family: $secondary-font;
+    color: $secondary-color;
 
 }
-.btn{
-    margin-top:5%;
+
+.btn {
+    margin-top: 5%;
 }
-.btn,a{
-    font-family:$secondary-font;
+
+.btn, a {
+    font-family: $secondary-font;
 }
 
 .bg {
@@ -45,52 +46,56 @@ p{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color:white;
+    color: white;
 }
 
-#home{
+#home {
     background-image: url("assets/home.png");
-    padding:18% 0%;
+    padding: 18% 0%;
 }
-#home{
-    h1,h3{
-        color:white;
+
+#home {
+    h1, h3 {
+        color: white;
     }
 }
-#home-content{
-    margin:5% 0%;
-}
-#about{
-    padding:10%;
+
+#home-content {
+    margin: 5% 0%;
 }
 
-#contact{
+#about {
+    padding: 10%;
+}
+
+#contact {
     background-image: url("assets/contact.png");
-    padding:10% 0%
+    padding: 10% 0%;
 }
 
-.contact-bkg{
+.contact-bkg {
     background-color: white;
-    color:#707070;
+    color: #707070;
     padding: 10% 0 10% 3%;
 }
 
-footer{
-    p{
-        color:white;
-    }
+footer {
     background-color: $main-color;
     padding: 4% 0%;
-    a, #footer-content{
-        padding:2% 5% 0% 2%;
+    p {
+        color: white;
+    }
+    a, #footer-content {
+        padding: 2% 5% 0% 2%;
     }
 }
 
-i{
-    color:white;
-    margin-left:5%;
+i {
+    color: white;
+    margin-left: 5%;
 }
-#footer-content{
+
+#footer-content {
     padding: 5% 0%;
 }
 
@@ -99,14 +104,30 @@ i{
     margin-bottom: 5%;
 }
 
-#notesForm,#injuriesForm,#confirmationForm{
+#notesForm, #injuriesForm, #confirmationForm {
     display: none;
 }
-    
-.formContent{
+
+.formContent {
     margin: 8%;
 }
-    
+
 #paginationForms {
     padding: 3%;
+}
+
+.form-i {
+    color: $main-color;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: $main-color;
+    border-color: $main-color;
+}
+
+.page-link {
+    color: $main-color;
+    background-color: #fff;
+    border: 1px solid $main-color;
 }

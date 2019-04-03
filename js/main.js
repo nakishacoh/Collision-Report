@@ -53,30 +53,36 @@ $( document ).ready(function() {
     }
 
     // changing active state
-    $("#pagination-forms li a").click(function(e){
+    $("#pagination-forms li a").not("#page-prev, #page-next").click(function(e){
         $("#pagination-forms li").removeClass("active");
         var $parent = $(this).parent();
-        $parent.addClass("active").not("#page-prev,#page-next");
+        $parent.addClass("active");
         e.preventDefault();
     })
 
     // previous and next buttons
+    var liActive=$("#pagination-forms li.active");
+    var prevBtn=$("#page-prev");
+    var nextBtn=$("#page-next");
 
-    // pageLi=$("#pagination-forms li");
-    // $("#page-next").click(function(){
-    //     if (pageLi.hasClass("active"){
-    //
+    // if (prevBtn) {
+    //     prevBtn.click(function(){
+    //         $("#pagination-forms li.active").prev("li").find("a").trigger("click");
     //     })
-    // })
+    // }
+    //
+    // if (nextBtn) {
+    //     nextBtn.click(function(){
+    //         $("#pagination-forms li.active").next("li").find("a").trigger("click");
+    //     })
+    // }
 
-    // the two are interfering need an if statement?
-
-    $("#page-next").click(function(){
-        $("#pagination-forms li > .active").next("li").find("a").trigger("click");
+    prevBtn.click(function(){
+        $("#pagination-forms li.active").prev("li").find("a").trigger("click");
     })
 
-    $("#page-prev").click(function(){
-        $("#pagination-forms li > .active").prev("li").find("a").trigger("click");
+    nextBtn.click(function(){
+        $("#pagination-forms li.active").next("li").find("a").trigger("click");
     })
 
 })

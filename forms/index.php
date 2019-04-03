@@ -3,8 +3,41 @@ include '../header.php';
 ?>
 
 <div class="formContent">
-    <!-- Form for the other person involved -->
+
+    <!-- pagination for forms -->
+    <nav id="pagination-forms" aria-label="Report Accident Forms">
+    <ul class="pagination justify-content-center">
+        <!-- <li class="page-item disabled">
+            <a class="page-link" id="page-prev" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li> -->
+        <li class="page-item">
+            <a class="page-link" id="page-prev" href="#">
+                <i class="fas fa-chevron-left form-i"></i>
+            </a>
+        </li>
+        <li class="page-item active">
+            <a class="page-link" id="page-driver" href="http://localhost/webdev/collision-report/forms/">Other Driver</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" id="page-notes" href="http://localhost/webdev/collision-report/forms/#notesForm">Notes</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" id="page-injuries" href="http://localhost/webdev/collision-report/forms/#injuriesForm">Injuries</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" id="page-confirmation" href="http://localhost/webdev/collision-report/forms/#confirmationForm">Confirmation</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" id="page-next" href="#">
+                <i class="fas fa-chevron-right form-i"></i>
+            </a>
+        </li>
+    </ul>
+    </nav>
+
+    <!-- form for the other person involved -->
     <div id="forms" class="d-flex justify-content-center">
+
         <div id="driverForm" class="col-lg-6 col-sm-12">
             <h2>Other Person(s) Involved</h2>
             <form class="" action="" method="post">
@@ -52,7 +85,7 @@ include '../header.php';
             </form>
         </div>
 
-        <!-- Form for listing the injuries sustained -->
+        <!-- form for listing the injuries sustained -->
         <div id="injuriesForm" class="col-lg-6 col-sm-12">
             <h2>Injuries</h2>
             <form class="" action="" method="post">
@@ -79,31 +112,9 @@ include '../header.php';
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Continue</button>
             </form>
         </div>
+
     </div>
 
-    <!-- pagination for forms -->
-    <nav id="pagination-forms" aria-label="Report Accident Forms">
-    <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-            <a class="page-link" id="page-prev" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-        </li>
-        <li class="page-item active">
-            <a class="page-link" id="page-driver" href="http://localhost/webdev/collision-report/forms/">Other Driver</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" id="page-notes" href="http://localhost/webdev/collision-report/forms/#notesForm">Notes</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" id="page-injuries" href="http://localhost/webdev/collision-report/forms/#injuriesForm">Injuries</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" id="page-confirmation" href="http://localhost/webdev/collision-report/forms/#confirmationForm">Confirmation</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" id="page-next" href="#">Next</a>
-        </li>
-    </ul>
-    </nav>
 </div>
 
 <?php
