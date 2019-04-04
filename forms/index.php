@@ -16,16 +16,16 @@ include '../header.php';
             </a>
         </li>
         <li class="page-item active">
-            <a class="page-link" id="page-driver" href="http://localhost/webdev/collision-report/forms/">Other Driver</a>
+            <a class="page-link" id="page-driver" href="http://localhost/collision-report/forms/">Other Driver</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-notes" href="http://localhost/webdev/collision-report/forms/#notesForm">Notes</a>
+            <a class="page-link" id="page-notes" href="http://localhost/collision-report/forms/#notesForm">Notes</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-injuries" href="http://localhost/webdev/collision-report/forms/#injuriesForm">Injuries</a>
+            <a class="page-link" id="page-injuries" href="http://localhost/collision-report/forms/#injuriesForm">Injuries</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-confirmation" href="http://localhost/webdev/collision-report/forms/#confirmationForm">Confirmation</a>
+            <a class="page-link" id="page-confirmation" href="http://localhost/collision-report/forms/#confirmationForm">Confirmation</a>
         </li>
         <li class="page-item">
             <a class="page-link" id="page-next" href="#">
@@ -40,7 +40,7 @@ include '../header.php';
 
         <div id="driverForm" class="col-lg-6 col-sm-12">
             <h2>Other Person(s) Involved</h2>
-            <form class="" action="" method="post">
+            <form action= "processes/processing-otherDriver.php" method="POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="e.g. John">
@@ -51,7 +51,7 @@ include '../header.php';
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="phone" name="phone" class="form-control" id="phone" aria-describedby="phoneNumber" placeholder="e.g. 905-123-4321">
+                    <input  type="tel" name="number" class="form-control" id="number" aria-describedby="phoneNumber" placeholder="e.g. 905-123-4321">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Continue</button>
             </form>
@@ -60,7 +60,7 @@ include '../header.php';
         <!-- form for additional notes -->
         <div id="notesForm" class="col-lg-6 col-sm-12">
             <h2>Notes</h2>
-            <form class="" action="" method="post">
+            <form action= "processes/processing-notes.php" method="POST">
                 <div class="form-group">
                     <label for="notes">Notes</label>
                     <textarea class="form-control" name="notes" id="notes" rows="3"></textarea>

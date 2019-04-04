@@ -1,4 +1,6 @@
 <?php
+$page_title = "Home";
+$page = "home";
 
 include 'header.php';
 
@@ -16,14 +18,14 @@ include 'header.php';
                 </div>
                 <div id= "button-container" class="row  justify-content-center">
                     <div class="col-lg-4 col-md-12 col-sm-12" >
-                        <a href= "form.php">
+                        <a href= "http://localhost/Collision-Report/form">
                             <button type="button" class="btn btn-primary btn-lg btn-block ">
                                 REPORT AN ACCIDENT
                             </button>
                         </a>
                     </div>
                     <div class= "col-lg-4 col-md-12 col-sm-12"> 
-                        <a href= "user.php">
+                        <a href= "http://localhost/Collision-Report/signIn">
                             <button type="button" class="btn btn-primary btn-lg btn-block">
                                 SIGN IN
                             </button>
@@ -77,7 +79,7 @@ include 'header.php';
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" name= "message" id="message" rows="3"></textarea>
+                        <textarea class="form-control" name="message" id="message" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
                 </form>
