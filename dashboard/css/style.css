@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 html, body{
-  height:100%;
+  height:auto;
   margin:0;
   font-size: 18px;
 }
@@ -19,17 +19,17 @@ h1, h2, h3{
 p{
   font-family: "Montserrat";
 }
-
+/* 
 .btn{
   width:120px;
   height:36px;
   text-align: center !important;
   margin: auto;
-}
+} */
 
 html button{
-  background-color: #217eba !important;
-  border-color: #217eba !important
+  background-color: #217eba !important; 
+  border-color: #217eba !important; 
 }
 
 /* Navigation */
