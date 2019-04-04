@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard</title>
@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
-<body>
+<body id="body">
   <!-- Navigation -->
     <div class="nav flex-column nav-pills dash navBack" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <span class="navbar-brand mb-0"><h2 class="alignTitle">Collision Report</h2></span>
@@ -23,11 +23,11 @@
 
 
 
-<div class="tab-content content" id="v-pills-tabContent" role="tabpanel">
+<div class="tab-content content navBar" id="v-pills-tabContent" role="tabpanel">
 
 <!-- Home Page -->
 <!-- <h2 class="hTitle">Home</h2> -->
-<div class="tab-pane active col-lg-8 col-md-12 col-sm-6" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+<div class="tab-pane active col-lg-8 col-md-12 col-sm-6 " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
   <h1 class="hTitle">Home</h1>
 
   <table class="table table-bordered tab-pane fade show">
@@ -94,7 +94,7 @@
                 <div class = "col-lg-6 col-sm-12 contact-bkg" >
                     <h1>Contact</h1>
                     <p>Get in touch by sending a message or calling us at the location closest to you </p>
-                    <a href="#location"><button class = "btn-primary btn-lg">Find Location</button></a>
+                    <a href="#location"><button class = "btn btn-primary btn-lg">Find Location</button></a>
                 </div>
 
                 <div class= "col-lg-6 col-sm-12 formCol">
@@ -115,7 +115,7 @@
                             <label for="message">Message</label>
                             <textarea class="form-control" name= "message" id="message" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary btn-lg">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
                     </form>
                 </div>
         </div>

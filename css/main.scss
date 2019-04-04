@@ -25,6 +25,7 @@ a:hover {
 
 h1, h2, h3, h4 {
     color: $main-color;
+    font-family: $main-font;
 }
 
 p {
@@ -137,3 +138,12 @@ i {
     background-color: #fff;
     border: 1px solid $main-color;
 }
+
+// dashboard
+
+// HTML and body
+#html, #body{
+    height: 100%;
+    margin:0;
+  }
+  
