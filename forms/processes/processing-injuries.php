@@ -1,9 +1,7 @@
 <?php
 // session_start();
 // receive username and password
-$notes = $_POST['notes'];
-$date = $_POST['date'];
-$time = $_POST['time'];
+$injuries = $_POST['injuries'];
 
 // check admin table for valid username and password
 $dbusername = "razaalin_alina";
@@ -11,11 +9,11 @@ $dbpassword = "iZKoDeSbtiPLYSGT";
 $pdo = new PDO("mysql:host=localhost;dbname=razaalin_collision-report", $dbusername, $dbpassword);
 
 $stmt = $pdo->prepare("
-	INSERT INTO `notes` (`notesID`, `notes`, `date`, `time`)
-	VALUES (NULL, '$notes', '$date', '$time')");
+	INSERT INTO `injuries` (`injuryID`, `injury`)
+	VALUES (NULL, '$injuries')");
 
 $stmt->execute();
 
-header("Location: /collision-report/form/#injuriesForm");
+header("Location: /collision-report/form/#confirmationForm");
 
 ?>
