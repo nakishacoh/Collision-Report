@@ -3,13 +3,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard</title>
-  <link rel="stylesheet" type="text/css" href="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/dashboard/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/dashboard/css/style.css"> -->
   <link rel = "stylesheet" href ="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/css/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
 <body id="body">
+<div id="wrapper">
   <!-- Navigation -->
     <div class="nav flex-column nav-pills dash navBack" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <span class="navbar-brand mb-0"><h2 class="alignTitle">Collision Report</h2></span>
@@ -23,11 +24,11 @@
 
 
 
-<div class="tab-content content navBar" id="v-pills-tabContent" role="tabpanel">
+<div class="tab-content content" id="v-pills-tabContent" role="tabpanel">
 
 <!-- Home Page -->
 <!-- <h2 class="hTitle">Home</h2> -->
-<div class="tab-pane active col-lg-8 col-md-12 col-sm-6 " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+<div class="tab-pane active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
   <h1 class="hTitle">Home</h1>
 
   <table class="table table-bordered tab-pane fade show">
@@ -61,7 +62,7 @@
   <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
     <h1 class="hTitle">General Account Settings</h1>
 
-    <table id="vertical-2 formCols">
+    <table id=" formCols">
                <div class="row">
                  <div class="col-6 col-sm-3"><label for="firstName">Name</label></div>
                  <div class="col-6 col-sm-3">Joanne Day</div>
@@ -123,7 +124,7 @@
   </div>
 </div>
 
-
+</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

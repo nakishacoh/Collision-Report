@@ -26,56 +26,47 @@ html button{
 /* Navigation */
 
 .navBack{
-  background-color: #1982C4;
-  height: 100%;
+  /* background-color: #1982C4; */
+  /* height: 100%; */
 }
 
-.dash{
+/* .dash{
   width:17em;
-}
+} */
 
-/*#v-pills-home-tab, #v-pills-profile-tab, #v-pills-messages-tab, #v-pills-settings-tab, #logout{
+
+/* .nav-child{
   background-color: #217eba !important;
   color: white;
-}*/
-.nav-child{
-  background-color: #217eba !important;
-  color: white;
-}
-.navBack .nav-link:focus{
+} */
+/* .navBack .nav-link:focus{
    background-color: #707070 !important;
-}
+} */
 
-/*#v-pills-tab .nav{
-  background-color: #217eba !important;
-  color: white;
 
-}*/
 
 
 
 /* Panel*/
-.content{
+/* .content{
   position: absolute;
   top: 80px;
   left: 15em;
   right: 5em;
   font-size: 1.5em;
-  /*width: 200px;
-  height: 100px;*/
-}
+} */
 
 
-.navBack a{
+/* .navBack a{
   color: white;
-}
+} */
 
 
-.logout{
+/* .logout{
   margin-bottom: 0;
   background-color: #217eba !important;
   color: white;
-}
+} */
 
 /*.nav a:focus{
   background-color: #707070 !important;
@@ -87,12 +78,12 @@ html button{
 
 
 /* Logo */
-.alignTitle{
+/* .alignTitle{
   padding-left: .5em;
   padding-top: 1em;
   padding-bottom: 1em;
   color: white;
-}
+} */
 
 /* Table */
 #v-pills-tabContent table{
@@ -103,23 +94,23 @@ html button{
 
 /* Account Page */
 
-#vertical-2 thead, #vertical-2 tbody{
-              display:inline-block;
-          }
+/* #vertical-2 thead, #vertical-2 tbody{
+  display:inline-block;
+} */
 
 /* Contact */
-#contact {
+/* #contact {
   background-image: url("assets/contact.png");
   padding: 10% 0%;
-}
+} */
 
 /* Subtitles */
-.hTitle{
+/* .hTitle{
   padding-bottom: 1.5em;
-}
+} */
 
 /* Hover */
 
-.highlight:hover{
+/* .highlight:hover{
   background-color: #217eba;
-}
+} */

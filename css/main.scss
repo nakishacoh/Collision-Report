@@ -145,5 +145,71 @@ i {
 #html, #body{
     height: 100%;
     margin:0;
+    min-height: 100%;
   }
+
+  .wrapper{
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+  }
+
+  .navBack{
+    background-color: $main-color;
+    height: 100%;
+    position: absolute;  
+  }
+
+  .dash{
+    width:17em;
+  }
+
+  .nav-child{
+    background-color: #217eba !important;
+    color: white;
+  }
+
+  .navBack .nav-link:focus{
+    background-color: $secondary-color !important;
+ }
+
+ /* Panel*/
+.content{
+    position: absolute;
+    top: 80px;
+    left: 15em;
+    right: 5em;
+    font-size: 1.5em; 
+    /*width: 200px;
+    height: 100px;*/
+  }
+
+  .navBack a{
+  color: white;
+} 
+
+  .logout{
+    margin-bottom: 0;
+    // background-color: #217eba !important;
+    // color: white;
+  }
+  
+  /* Logo */
+    .alignTitle{
+    padding-left: .5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+  }
+
+  /* Account Page */
+
+  /* Contact */
+
+  /* Subtitles */
+    .hTitle{
+    padding-bottom: 1.5em;
+  }
+
   
