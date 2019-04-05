@@ -33,9 +33,14 @@ p {
 
 }
 
+button.dashBtn.btn.btn-primary {
+    margin: 0%;
+}
+
 .btn {
     margin-top: 5%;
 }
+
 
 .btn, a {
     font-family: $secondary-font;
@@ -205,7 +210,9 @@ i {
   /* Account Page */
 
   /* Contact */
+  #contactDa{
 
+  }
   /* Subtitles */
     .hTitle{
     padding-bottom: 1.5em;

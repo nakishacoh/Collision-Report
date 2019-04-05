@@ -10,121 +10,124 @@
 
 </head>
 <body id="body">
-<div id="wrapper">
-  <!-- Navigation -->
-    <div class="nav flex-column nav-pills dash navBack" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <span class="navbar-brand mb-0"><h2 class="alignTitle">Collision Report</h2></span>
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-      <a class="nav-link nav-child" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Report Accident</a>
-      <a class="nav-link nav-child" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Account</a>
-      <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
-      <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
-  </div>
-<!-- End of Navigation -->
+  <!-- <div id="wrapper"> -->
+    <!-- Navigation -->
+      <div class="nav flex-column nav-pills dash navBack" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <span class="navbar-brand mb-0"><h2 class="alignTitle">Collision Report</h2></span>
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+        <a class="nav-link nav-child" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Report Accident</a>
+        <a class="nav-link nav-child" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Account</a>
+        <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
+        <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
+      </div>
+    <!-- End of Navigation -->
 
 
 
-<div class="tab-content content" id="v-pills-tabContent" role="tabpanel">
+  <div class="tab-content content" id="v-pills-tabContent" role="tabpanel">
 
-<!-- Home Page -->
-<!-- <h2 class="hTitle">Home</h2> -->
-<div class="tab-pane active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-  <h1 class="hTitle">Home</h1>
+    <!-- Home Page -->
+    <!-- <h2 class="hTitle">Home</h2> -->
+    <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+      <h1 class="hTitle">Home</h1>
 
-  <table class="table table-bordered tab-pane fade show">
-    <thead>
-      <tr>
-        <th scope="col">Report ID</th>
-        <!-- <th scope="col">First</th> -->
-        <!-- <th scope="col">Last</th> -->
-        <th scope="col">Location</th>
-        <th scope="col">Status</th>
-        <th scope="col">Edit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <!-- <td>Mark</td> -->
-        <!-- <td>Otto</td> -->
-        <td>Upper Middle Road and Trafalgar Road, Oakville</td>
-        <td>Pending</td>
-        <td> <button type="button" class="btn btn-primary">Edit</button></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      <table class="table table-bordered tab-pane fade show">
+        <thead>
+          <tr>
+            <th scope="col">Report ID</th>
+            <!-- <th scope="col">First</th> -->
+            <!-- <th scope="col">Last</th> -->
+            <th scope="col">Location</th>
+            <th scope="col">Status</th>
+            <th scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <!-- <td>Mark</td> -->
+            <!-- <td>Otto</td> -->
+            <td>Upper Middle Road and Trafalgar Road, Oakville</td>
+            <td>Pending</td>
+            <td> <button type="button" class="btn btn-primary">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  <!-- Report Accident Page -->
-  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+      <!-- Report Accident Page -->
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
 
-  <!-- Account Page -->
-  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-    <h1 class="hTitle">General Account Settings</h1>
+      <!-- Account Page -->
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+        <h1 class="hTitle">General Account Settings</h1>
 
-    <table id=" formCols">
-               <div class="row">
-                 <div class="col-6 col-sm-3"><label for="firstName">Name</label></div>
-                 <div class="col-6 col-sm-3">Joanne Day</div>
-                 <button type="button" class="btn btn-primary">Edit</button>
+        <table id=" formCols">
+                  <div class="">
+                    <div class = "row">
+                      <div class="col-6 col-sm-3"><label for="firstName">Name</label></div>
+                      <div class="col-6 col-sm-3">Joanne Day</div>
+                      <button type="button" class="dashBtn btn btn-primary">Edit</button>
+                    </div>
+                    <!-- Force next columns to break to new line -->
+                    <div class="row">
+                      <div class="">
+                        <label for="firstName">
+                          Insurance
+                        </label>
+                      </div>
+                      <div class="">State Farm</div>
+                      <button type="button" class="btn btn-primary">Edit</button>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-6 col-sm-3"><label for="firstName">Email</label></div>
+                    <div class="col-6 col-sm-3">jd@gmail.com</div>
+                    <button type="button" class="btn btn-primary">Edit</button>
 
-                 <!-- Force next columns to break to new line -->
-                 <div class="w-100"></div>
-                 <div class="col-6 col-sm-3"><label for="firstName">Insurance</label></div>
-                 <div class="col-6 col-sm-3">State Farm</div>
-                 <button type="button" class="btn btn-primary">Edit</button>
-
-                 <div class="w-100"></div>
-                 <div class="col-6 col-sm-3"><label for="firstName">Email</label></div>
-                 <div class="col-6 col-sm-3">jd@gmail.com</div>
-                 <button type="button" class="btn btn-primary">Edit</button>
-
-                 <div class="w-100"></div>
-                 <div class="col-6 col-sm-3"><label for="firstName">Phone Number</label></div>
-                 <div class="col-6 col-sm-3">555555555</div>
-                 <button type="button" class="btn btn-primary">Edit</button>
-               </div>
+                    <div class="w-100"></div>
+                    <div class="col-6 col-sm-3"><label for="firstName">Phone Number</label></div>
+                    <div class="col-6 col-sm-3">555555555</div>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                  </div>
         </table>
 
-  </div>
+      </div>
 
-  <!-- Contact Page -->
-  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-    <!-- <div  id = "contact" class="bg"> -->
-            <div class = "d-flex flex-wrap">
-                <div class = "col-lg-6 col-sm-12 contact-bkg" >
-                    <h1>Contact</h1>
-                    <p>Get in touch by sending a message or calling us at the location closest to you </p>
-                    <a href="#location"><button class = "btn btn-primary btn-lg">Find Location</button></a>
-                </div>
+      <!-- Contact Page -->
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+        <!-- <div  id = "contact" class="bg"> -->
+                <div class = "">
+                    <!-- <div class = "col-lg-6 col-sm-12 contact-bkg" > -->
+                        <h1 class="hTitle">Contact</h1>
+                    <!-- </div> -->
 
-                <div class= "col-lg-6 col-sm-12 formCol">
-                    <form action="processes/processing-contact.php" method="POST">
+                    <div class= "col-lg-6 col-sm-12 formCol">
+                        <form action="processes/processing-contact.php" method="POST">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="ie.John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="ie.Doe">
+                                </div>
                             <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="ie.John">
+                                <label for="email">Email address</label>
+                                <input type="email" name= "email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                             </div>
                             <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="ie.Doe">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name= "message" id="message" rows="3"></textarea>
                             </div>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" name= "email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" name= "message" id="message" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                    </form>
-                </div>
-        </div>
-    <!-- </div> -->
-  </div>
-</div>
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </form>
+                     </div>
+            </div>
+        <!-- </div> -->
+      </div>
+    </div>
 
-</div>
+  </div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
