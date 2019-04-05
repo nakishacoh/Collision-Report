@@ -40,7 +40,7 @@ include '../header.php';
 
         <div id="driverForm" class="col-lg-6 col-sm-12">
             <h2>Other Person(s) Involved</h2>
-            <form action= "processes/processing-otherDriver.php" method="POST">
+            <form action="processes/processing-otherDriver.php" method="POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="e.g. John">
@@ -60,7 +60,7 @@ include '../header.php';
         <!-- form for additional notes -->
         <div id="notesForm" class="col-lg-6 col-sm-12">
             <h2>Notes</h2>
-            <form action= "processes/processing-notes.php" method="POST">
+            <form action="processes/processing-notes.php" method="POST">
                 <div class="form-group">
                     <label for="notes">Notes</label>
                     <textarea class="form-control" name="notes" id="notes" rows="3"></textarea>
@@ -88,7 +88,7 @@ include '../header.php';
         <!-- form for listing the injuries sustained -->
         <div id="injuriesForm" class="col-lg-6 col-sm-12">
             <h2>Injuries</h2>
-            <form class="" action="" method="post">
+            <form class="" action="processes/processing-injuries.php" method="POST">
                 <div class="form-group">
                     <label for="injuries">List any injuries sustained</label>
                     <textarea class="form-control" name="injuries" id="injuries" rows="3"></textarea>
@@ -100,7 +100,8 @@ include '../header.php';
         <!-- form for confirmation -->
         <div id="confirmationForm" class="col-lg-6 col-sm-12">
             <h2>Confirmation</h2>
-            <form>
+            <p>Please create an account for easy access to your form.</p>
+            <form class="" action="processes/processing-confirmation.php" method="POST">
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
@@ -109,7 +110,7 @@ include '../header.php';
                     <label for="password">Password</label>
                     <input type="password" name="password" class="form-control" id="password" aria-describedby="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Continue</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
             </form>
         </div>
 
