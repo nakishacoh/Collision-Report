@@ -16,16 +16,16 @@ include '../header.php';
             </a>
         </li>
         <li class="page-item active">
-            <a class="page-link" id="page-driver" href="http://localhost/collision-report/forms/">Other Driver</a>
+            <a class="page-link" id="page-driver" href="http://localhost/webdev/collision-report/forms/">Other Driver</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-notes" href="http://localhost/collision-report/forms/#notesForm">Notes</a>
+            <a class="page-link" id="page-notes" href="http://localhost/webdev/collision-report/forms/#notesForm">Notes</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-injuries" href="http://localhost/collision-report/forms/#injuriesForm">Injuries</a>
+            <a class="page-link" id="page-injuries" href="http://localhost/webdev/collision-report/forms/#injuriesForm">Injuries</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-confirmation" href="http://localhost/collision-report/forms/#confirmationForm">Confirmation</a>
+            <a class="page-link" id="page-confirmation" href="http://localhost/webdev/collision-report/forms/#confirmationForm">Confirmation</a>
         </li>
         <li class="page-item">
             <a class="page-link" id="page-next" href="#">
@@ -53,7 +53,7 @@ include '../header.php';
                     <label for="phone">Phone Number</label>
                     <input  type="tel" name="number" class="form-control" id="number" aria-describedby="phoneNumber" placeholder="e.g. 905-123-4321">
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Continue</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="driverSubmit">Continue</button>
             </form>
         </div>
 
@@ -81,7 +81,7 @@ include '../header.php';
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Continue</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="notesSubmit">Continue</button>
             </form>
         </div>
 
@@ -93,7 +93,7 @@ include '../header.php';
                     <label for="injuries">List any injuries sustained</label>
                     <textarea class="form-control" name="injuries" id="injuries" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Continue</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="injuriesSubmit">Continue</button>
             </form>
         </div>
 
@@ -110,7 +110,7 @@ include '../header.php';
                     <label for="password">Password</label>
                     <input type="password" name="password" class="form-control" id="password" aria-describedby="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="confirmationSubmit">Submit</button>
             </form>
         </div>
 

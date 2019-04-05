@@ -86,3 +86,44 @@ $( document ).ready(function() {
     })
 
 })
+
+// handling of submit button to continue to next section of form
+
+// JQUERY
+// get the form
+var driverForm = $("#driverForm"); // id may need to be on <form> and not the <div> ??
+// set up an event listener for the form
+$(driverForm).submit(function(event) {
+    // stop the browser from submitting the form
+    event.preventDefault();
+    // serialize the form data
+    var formData = $(driverForm).serialize();
+    // submit the form using AJAX
+    $.ajax({
+        type: "POST",
+        url: $(driverForm).attr("action"),
+        data: formData
+    })
+})
+
+// JAVASCRIPT
+var driverForm = document.getElementById("driverForm");
+driverForm.addEventListener("submit", driverFormFunction);
+function driverFormFunction(e){
+    e.preventDefault();
+    var myRequest = new XMLHttpRequest;
+    myRequest.onreadystatechange = function(){
+        console.log(myRequest.readyState);
+        if(myRequest.readyState === 4){
+            // ... code
+        }
+    }
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+    var number = document.getElementById("number").value;
+    myRequest.open("POST", "http://localhost/webdev/collision-report/forms/processes/processing-otherDriver.php", true);
+    myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    myRequest.send("firstname="+firstname+
+                    "&lastname="+lastname+
+                    "&number="+number);
+}
