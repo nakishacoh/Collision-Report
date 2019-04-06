@@ -16,16 +16,16 @@ include '../header.php';
             </a>
         </li>
         <li class="page-item active">
-            <a class="page-link" id="page-driver" href="http://localhost/webdev/collision-report/forms/">Other Driver</a>
+            <a class="page-link" id="page-driver" href="http://localhost/collision-report/forms/">Other Driver</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-notes" href="http://localhost/webdev/collision-report/forms/#notesForm">Notes</a>
+            <a class="page-link" id="page-notes" href="http://localhost/collision-report/forms/#notesForm">Notes</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-injuries" href="http://localhost/webdev/collision-report/forms/#injuriesForm">Injuries</a>
+            <a class="page-link" id="page-injuries" href="http://localhost/collision-report/forms/#injuriesForm">Injuries</a>
         </li>
         <li class="page-item">
-            <a class="page-link" id="page-confirmation" href="http://localhost/webdev/collision-report/forms/#confirmationForm">Confirmation</a>
+            <a class="page-link" id="page-confirmation" href="http://localhost/collision-report/forms/#confirmationForm">Confirmation</a>
         </li>
         <li class="page-item">
             <a class="page-link" id="page-next" href="#">
@@ -40,7 +40,7 @@ include '../header.php';
 
         <div id="driverForm" class="col-lg-6 col-sm-12">
             <h2>Other Person(s) Involved</h2>
-            <form action="processes/processing-otherDriver.php" method="POST">
+            <form id="formDriver"  method= "POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="e.g. John">
@@ -60,7 +60,7 @@ include '../header.php';
         <!-- form for additional notes -->
         <div id="notesForm" class="col-lg-6 col-sm-12">
             <h2>Notes</h2>
-            <form action="processes/processing-notes.php" method="POST">
+            <form method="POST" id="formNotes">
                 <div class="form-group">
                     <label for="notes">Notes</label>
                     <textarea class="form-control" name="notes" id="notes" rows="3"></textarea>
@@ -88,7 +88,7 @@ include '../header.php';
         <!-- form for listing the injuries sustained -->
         <div id="injuriesForm" class="col-lg-6 col-sm-12">
             <h2>Injuries</h2>
-            <form class="" action="processes/processing-injuries.php" method="POST">
+            <form class="" action="processes/processing-injuries.php" method="POST" id= "formInjuries">
                 <div class="form-group">
                     <label for="injuries">List any injuries sustained</label>
                     <textarea class="form-control" name="injuries" id="injuries" rows="3"></textarea>
@@ -101,7 +101,15 @@ include '../header.php';
         <div id="confirmationForm" class="col-lg-6 col-sm-12">
             <h2>Confirmation</h2>
             <p>Please create an account for easy access to your form.</p>
-            <form class="" action="processes/processing-confirmation.php" method="POST">
+            <form id="formConfirmation" method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="e.g. John">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">First Name</label>
+                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="e.g. Doe">
+                </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
@@ -110,7 +118,7 @@ include '../header.php';
                     <label for="password">Password</label>
                     <input type="password" name="password" class="form-control" id="password" aria-describedby="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block" id="confirmationSubmit">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="confirmationSubmit">Create Account</button>
             </form>
         </div>
 
