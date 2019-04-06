@@ -91,6 +91,11 @@ $( document ).ready(function() {
 
 })
 
+function changeForm(e){
+    $("#pagination-forms li.active").next("li").find("a").trigger("click");
+    console.log("nextform")
+}
+
 var formDriver= document.getElementById("formDriver");
 var driverSubmitBtn = document.getElementById("driverSubmit")
     if (driverSubmitBtn){
@@ -115,6 +120,7 @@ var driverSubmitBtn = document.getElementById("driverSubmit")
         myRequest.send("firstname=" + firstname.value + 
                         "&lastname=" + lastname.value +
                         "&number="+ number.value); 
+        changeForm();
     };
 
 
@@ -143,6 +149,8 @@ var notesSubmitBtn = document.getElementById("notesSubmit")
         myRequest.send("notes=" + notes.value + 
                         "&date=" + date.value +
                         "&time="+ time.value); 
+
+        changeForm();
     };
 
     var formInjuries= document.getElementById("formInjuries");
@@ -165,6 +173,8 @@ var notesSubmitBtn = document.getElementById("notesSubmit")
             myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-injuries.php", true); //true means it is asynchronous // Send urls through the url
             myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
             myRequest.send("injuries=" + injuries.value); 
+
+            changeForm();
         };
     
         var formConfirmation= document.getElementById("formConfirmation");
@@ -173,7 +183,7 @@ var notesSubmitBtn = document.getElementById("notesSubmit")
                 confirmationSubmitBtn.addEventListener("click",  formConfirmationFunction, false );
             };    
             function formConfirmationFunction(e){
-                e.preventDefault();
+                // e.preventDefault();
                 var myRequest = new XMLHttpRequest; 
             
                 myRequest.onreadystatechange = function(){
@@ -182,8 +192,8 @@ var notesSubmitBtn = document.getElementById("notesSubmit")
                         // var process = JSON.parse(myRequest.responseText);
                     }
                 };
-                var firstname = document.getElementById("firstname");
-                var lastname = document.getElementById("lastname");
+                var firstname = document.getElementById("fname");
+                var lastname = document.getElementById("lname");
                 var email = document.getElementById("email");
                 var password= document.getElementById("password");
                 

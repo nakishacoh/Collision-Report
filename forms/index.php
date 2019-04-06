@@ -43,11 +43,11 @@ include '../header.php';
             <form id="formDriver"  method= "POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="e.g. John">
+                    <input type="text" class="form-control"  name="firstname"  id= "firstname" placeholder="e.g. John">
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="e.g. Doe">
+                    <input type="text" class="form-control"  name="lastname" id="lastname"  placeholder="e.g. Doe">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
@@ -104,11 +104,11 @@ include '../header.php';
             <form id="formConfirmation" method="POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="e.g. John">
+                    <input type="text" class="form-control" name="firstname" id="fname" placeholder="e.g. John">
                 </div>
                 <div class="form-group">
                     <label for="lastName">First Name</label>
-                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="e.g. Doe">
+                    <input type="text" class="form-control"  name="lastname" id="lname" placeholder="e.g. Doe">
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
