@@ -43,6 +43,7 @@
     <!-- Accidents Page -->
     <!-- <h2 class="hTitle">Home</h2> -->
     <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+     
       <h1 class="hTitle">Accidents</h1>
 
       <ul class="nav nav-tabs">
@@ -52,7 +53,7 @@
     </ul>
 
     <div class="tab-content">
-      <div id="pendingReport" class="tab-pane fade in active">
+      <div id="pendingReport" class="tab-pane active">
         <h3>Pending Reports</h3>
         <p>Some content.</p>
       </div>
