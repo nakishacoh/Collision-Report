@@ -45,7 +45,7 @@
     <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
       <h1 class="hTitle">Accidents</h1>
 
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs d-flex justify-content-between">
         <li class="active"><a data-toggle="tab" href="#pendingReport">Pending Reports</a></li>
         <li><a data-toggle="tab" href="#menu1">Approved</a></li>
         <li><a data-toggle="tab" href="#menu2">Declined</a></li>
@@ -139,12 +139,12 @@
 
 
       <!-- Account Page -->
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+      <div class="tab-pane fade " id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
         <h1 class="hTitle">Account Settings</h1>
 
-        <table id="" class="table tab-pane fade show">
+        <table id="" class="table tab-pane fade show ">
 
-        <tbody class="acctInfo">
+        <tbody class="acctInfo ">
           <!-- Name Column -->
           <tr>
             <th scope="row">Name</th>
