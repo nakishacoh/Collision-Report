@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html id="html">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Employee Dashboard</title>
   <!-- <link rel="stylesheet" type="text/css" href="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/dashboard/css/style.css"> -->
-  <link rel = "stylesheet" href ="http://http://cohennak.dev.fast.sheridanc.on.ca/css/main.css">
+  <link rel = "stylesheet" href ="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/css/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -151,11 +151,7 @@
             </div>
         <!-- </div> -->
 
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 5164fd8aa9d79366bf09613766b25526d4080ac8
       </div>
     </div>
 
