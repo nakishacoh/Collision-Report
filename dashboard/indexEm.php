@@ -46,16 +46,37 @@
      
       <h1 class="hTitle">Accidents</h1>
 
-      <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#pendingReport">Pending Reports</a></li>
-      <li><a data-toggle="tab" href="#menu1">Approved</a></li>
-      <li><a data-toggle="tab" href="#menu2">Declined</a></li>
-    </ul>
+      <ul class="nav nav-tabs" id="tabToggle">
+        <li class="active"><a data-toggle="tab" href="#pendingReport"><h2>Pending Reports</h2></a></li>
+        <li><a data-toggle="tab" href="#menu1"><h2>Approved</h2></a></li>
+        <li><a data-toggle="tab" href="#menu2"><h2>Declined</h2></a></li>
+      </ul>
 
     <div class="tab-content">
       <div id="pendingReport" class="tab-pane active">
         <h3>Pending Reports</h3>
-        <p>Some content.</p>
+        <table class="table table-bordered tab-paneshow">
+        <thead>
+          <tr>
+            <th scope="col">Report ID</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Location</th>
+            <th scope="col">Status</th>
+            <th scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>Upper Middle Road and Trafalgar Road, Oakville</td>
+            <td>Pending</td>
+            <td> <button type="button" class="btn btn-primary">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
       </div>
 
       <div id="menu1" class="tab-pane fade">
