@@ -16,7 +16,6 @@
         <span class="navbar-brand mb-0"><h2 class="alignTitle">Collision Report</h2></span>
         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Accidents</a>
         <a class="nav-link nav-child" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Account</a>
-        <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
         <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
       </div>
 
@@ -30,7 +29,6 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Accidents</a>
         <a class="nav-link nav-child" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Account</a>
-        <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
         <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
         </div>
       </nav>
@@ -127,17 +125,6 @@
     </div>
     <!-- End of Accidents Tab -->
 
-
-
-
-
-
-
-
-
-
-
-
       <!-- Account Page -->
       <div class="tab-pane fade " id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
         <h1 class="hTitle">Account Settings</h1>
@@ -185,40 +172,6 @@
 
       </div>
 
-      <!-- Contact Page -->
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-        <!-- <div  id = "contact" class="bg"> -->
-                <div class = "table-responsive">
-                    <!-- <div class = "col-lg-6 col-sm-12 contact-bkg" > -->
-                        <h1 class="hTitle">Contact</h1>
-                    <!-- </div> -->
-
-                    <div class= "col-sm-6 col-lg-6 formCol table-responsive">
-                        <form action="processes/processing-contact.php" method="POST">
-                                <div class="form-group">
-                                    <label for="firstName">First Name</label>
-                                    <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="ie.John">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name</label>
-                                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="ie.Doe">
-                                </div>
-                            <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" name= "email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea class="form-control" name= "message" id="message" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                        </form>
-                     </div>
-            </div>
-        <!-- </div> -->
-
-
-      </div>
     </div>
 
   </div>
