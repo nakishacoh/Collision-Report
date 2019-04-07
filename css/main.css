@@ -10736,9 +10736,6 @@ i {
   .logout {
     margin-bottom: 0;
   }
-  #v-pills-home #tabToggle li h2 {
-    padding-right: 5.7em !important;
-  }
   /* Panel*/
   .content {
     position: absolute;
