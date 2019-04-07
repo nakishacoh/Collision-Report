@@ -1,4 +1,3 @@
-
 $( document ).ready(function() {
     console.log("connected");
 
@@ -86,123 +85,120 @@ $( document ).ready(function() {
         $("#pagination-forms li.active").next("li").find("a").trigger("click");
     })
 
-
-
-
 })
 
+// change which form shows after one section is completed
 function changeForm(e){
     $("#pagination-forms li.active").next("li").find("a").trigger("click");
     console.log("nextform")
 }
 
-var formDriver= document.getElementById("formDriver");
+// submitting other driver form
 var driverSubmitBtn = document.getElementById("driverSubmit")
-    if (driverSubmitBtn){
-        driverSubmitBtn.addEventListener("click",  formDriverFunction, false );
-    };    
-    function formDriverFunction(e){
-        e.preventDefault();
-        var myRequest = new XMLHttpRequest; 
-    
-        myRequest.onreadystatechange = function(){
-            if(myRequest.readyState === 4){
-                // console.log(myRequest.responseText);
-                // var process = JSON.parse(myRequest.responseText);
-            }
-        };
-        var firstname = document.getElementById("firstname");
-        var lastname = document.getElementById("lastname");
-        var number = document.getElementById("number");
-        
-        myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-otherDriver.php", true); //true means it is asynchronous // Send urls through the url
-        myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-        myRequest.send("firstname=" + firstname.value + 
-                        "&lastname=" + lastname.value +
-                        "&number="+ number.value); 
-        changeForm();
+// if the button is clicked run the function
+if (driverSubmitBtn){
+    driverSubmitBtn.addEventListener("click",  formDriverFunction, false);
+};
+function formDriverFunction(e){
+    // prevent form from submitting automatically
+    e.preventDefault();
+    // connecting
+    var myRequest = new XMLHttpRequest;
+    myRequest.onreadystatechange = function(){
+        if(myRequest.readyState === 4){}
     };
+    // grab inputs from form
+    var firstname = document.getElementById("firstname");
+    var lastname = document.getElementById("lastname");
+    var number = document.getElementById("number");
+    // send values to the database
+    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-otherDriver.php", true);
+    myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    myRequest.send("firstname="+firstname.value+
+                    "&lastname="+lastname.value+
+                    "&number="+number.value);
+    // switch user to next section of form
+    changeForm();
+};
 
-
-
-var formNotes= document.getElementById("formNotes");
+// submitting notes form
 var notesSubmitBtn = document.getElementById("notesSubmit")
-    if (notesSubmitBtn){
-        notesSubmitBtn.addEventListener("click",  formNotesFunction, false );
-    };    
-    function formNotesFunction(e){
-        e.preventDefault();
-        var myRequest = new XMLHttpRequest; 
-    
-        myRequest.onreadystatechange = function(){
-            if(myRequest.readyState === 4){
-                // console.log(myRequest.responseText);
-                // var process = JSON.parse(myRequest.responseText);
-            }
-        };
-        var notes = document.getElementById("notes");
-        var date = document.getElementById("date");
-        var time = document.getElementById("time");
-        
-        myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-notes.php", true); //true means it is asynchronous // Send urls through the url
-        myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-        myRequest.send("notes=" + notes.value + 
-                        "&date=" + date.value +
-                        "&time="+ time.value); 
-
-        changeForm();
+// if the button is clicked run the function
+if (notesSubmitBtn){
+    notesSubmitBtn.addEventListener("click",  formNotesFunction, false);
+};
+function formNotesFunction(e){
+    // prevent form from submitting automatically
+    e.preventDefault();
+    // connecting
+    var myRequest = new XMLHttpRequest;
+    myRequest.onreadystatechange = function(){
+        if(myRequest.readyState === 4){}
     };
+    // grab inputs from form
+    var notes = document.getElementById("notes");
+    var date = document.getElementById("date");
+    var time = document.getElementById("time");
+    // send values to the database
+    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-notes.php", true);
+    myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    myRequest.send("notes="+notes.value+
+                    "&date="+date.value+
+                    "&time="+time.value);
+    // switch user to next section of form
+    changeForm();
+};
 
-    var formInjuries= document.getElementById("formInjuries");
-    var injuriesSubmitBtn = document.getElementById("injuriesSubmit")
-        if (injuriesSubmitBtn){
-            injuriesSubmitBtn.addEventListener("click",  formInjuriesFunction, false );
-        };    
-        function formInjuriesFunction(e){
-            e.preventDefault();
-            var myRequest = new XMLHttpRequest; 
-        
-            myRequest.onreadystatechange = function(){
-                if(myRequest.readyState === 4){
-                    // console.log(myRequest.responseText);
-                    // var process = JSON.parse(myRequest.responseText);
-                }
-            };
-            var injuries = document.getElementById("injuries");
-            
-            myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-injuries.php", true); //true means it is asynchronous // Send urls through the url
-            myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-            myRequest.send("injuries=" + injuries.value); 
+// submitting injuries form
+var injuriesSubmitBtn = document.getElementById("injuriesSubmit")
+// if the button is clicked run the function
+if (injuriesSubmitBtn){
+    injuriesSubmitBtn.addEventListener("click", formInjuriesFunction, false);
+};
+function formInjuriesFunction(e){
+    // prevent form from submitting automatically
+    e.preventDefault();
+    // connecting
+    var myRequest = new XMLHttpRequest;
+    myRequest.onreadystatechange = function(){
+        if(myRequest.readyState === 4){}
+    };
+    // grab inputs from form
+    var injuries = document.getElementById("injuries");
+    // send values to the database
+    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-injuries.php", true);
+    myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    myRequest.send("injuries="+injuries.value);
+    // switch user to next section of form
+    changeForm();
+};
 
-            changeForm();
-        };
-    
-        var formConfirmation= document.getElementById("formConfirmation");
-        var confirmationSubmitBtn = document.getElementById("confirmationSubmit")
-            if (confirmationSubmitBtn){
-                confirmationSubmitBtn.addEventListener("click",  formConfirmationFunction, false );
-            };    
-            function formConfirmationFunction(e){
-                // e.preventDefault();
-                var myRequest = new XMLHttpRequest; 
-            
-                myRequest.onreadystatechange = function(){
-                    if(myRequest.readyState === 4){
-                        // console.log(myRequest.responseText);
-                        // var process = JSON.parse(myRequest.responseText);
-                    }
-                };
-                var firstname = document.getElementById("fname");
-                var lastname = document.getElementById("lname");
-                var email = document.getElementById("email");
-                var password= document.getElementById("password");
-                
-                myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-confirmation.php", true); //true means it is asynchronous // Send urls through the url
-                myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-                myRequest.send("firstname=" + firstname.value + 
-                                "&lastname=" + lastname.value +
-                                "&email=" + email.value +
-                                "&password="+ password.value); 
-
-            };
-        
+// submitting confirmation form
+var confirmationSubmitBtn = document.getElementById("confirmationSubmit")
+// if the button is clicked run the function
+if (confirmationSubmitBtn){
+    confirmationSubmitBtn.addEventListener("click",  formConfirmationFunction, false);
+};
+function formConfirmationFunction(e){
+    // prevent form from submitting automatically
+    e.preventDefault();
+    // connecting
+    var myRequest = new XMLHttpRequest;
+    myRequest.onreadystatechange = function(){
+        if(myRequest.readyState === 4){}
+    };
+    // grab inputs from form
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    // send values to the database
+    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-confirmation.php", true);
+    myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    myRequest.send("firstname="+fname.value+
+                    "&lastname="+lname.value+
+                    "&email="+email.value+
+                    "&password="+password.value);
+    // switch user to dashboard after completing form
+    window.location.href = "http://localhost/collision-report/dashboard/";
+}

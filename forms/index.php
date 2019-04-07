@@ -107,11 +107,11 @@ include '../header.php';
                     <input type="text" class="form-control" name="firstname" id="fname" placeholder="e.g. John">
                 </div>
                 <div class="form-group">
-                    <label for="lastName">First Name</label>
+                    <label for="lastName">Last Name</label>
                     <input type="text" class="form-control"  name="lastname" id="lname" placeholder="e.g. Doe">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email address</label>
+                    <label for="email">Email Address</label>
                     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <div class="form-group">
