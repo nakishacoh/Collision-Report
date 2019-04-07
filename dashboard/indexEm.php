@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="html">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Employee Dashboard</title>
   <!-- <link rel="stylesheet" type="text/css" href="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/dashboard/css/style.css"> -->
   <link rel = "stylesheet" href ="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/css/main.css">
@@ -16,6 +16,7 @@
         <span class="navbar-brand mb-0"><h2 class="alignTitle">Collision Report</h2></span>
         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Accidents</a>
         <a class="nav-link nav-child" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Account</a>
+        <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
         <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
       </div>
 
@@ -29,6 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Accidents</a>
         <a class="nav-link nav-child" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Account</a>
+        <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
         <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
         </div>
       </nav>
@@ -38,103 +40,102 @@
 
   <div class="tab-content content" id="v-pills-tabContent" role="tabpanel">
 
-    <!-- Accidents Page -->
+    <!-- Accidents Tab -->
     <!-- <h2 class="hTitle">Home</h2> -->
     <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-     
       <h1 class="hTitle">Accidents</h1>
 
-      <ul class="nav nav-tabs" id="tabToggle">
-        <li class="active"><a data-toggle="tab" href="#pendingReport"><h2>Pending Reports</h2></a></li>
-        <li><a data-toggle="tab" href="#menu1"><h2>Approved</h2></a></li>
-        <li><a data-toggle="tab" href="#menu2"><h2>Declined</h2></a></li>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#pendingReport">Pending Reports</a></li>
+        <li><a data-toggle="tab" href="#menu1">Approved</a></li>
+        <li><a data-toggle="tab" href="#menu2">Declined</a></li>
       </ul>
 
     <div class="tab-content">
 
-      <h1 class="hTitle">Accidents</h1>
-
-      <ul class="nav nav-tabs" id="tabToggle">
-        <li class="active"><a data-toggle="tab" href="#pendingReport"><h2>Pending Reports</h2></a></li>
-        <li><a data-toggle="tab" href="#menu1"><h2>Approved</h2></a></li>
-        <li><a data-toggle="tab" href="#menu2"><h2>Declined</h2></a></li>
-      </ul>
-      <div id="pendingReport" class="tab-pane active">
-        <!-- <h3>Pending Reports</h3> -->
-        <table class="table table-bordered tab-paneshow">
-        <thead>
-          <tr>
-            <th scope="col">Report ID</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Location</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Upper Middle Road and Trafalgar Road, Oakville</td>
-            <td> <button type="button" class="btn btn-primary">View</button></td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- Pending Reports -->
+      <div id="pendingReport" class="tab-pane fade in">
+        <table class="table table-bordered tab-pane active tabHeadings">
+          <thead>
+            <tr>
+              <th scope="col">Report ID</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Location</th>
+              <th scope="col">Status</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>Upper Middle Road and Trafalgar Road, Oakville</td>
+              <td>Pending</td>
+              <td> <button type="button" class="btn btn-primary">View</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
+      <!-- Approved Reports -->
       <div id="menu1" class="tab-pane fade">
-        
-            <div class="tab-content">
-          <div id="pendingReport" class="tab-pane active">
-            <!-- <h3>Pending Reports</h3> -->
-            <table class="table table-bordered tab-paneshow">
-            <thead>
-              <tr>
-                <th scope="col">Report ID</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>Upper Middle Road and Trafalgar Road, Oakville</td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- </div> -->
-
+        <table class="table table-bordered tab-pane show tabHeadings">
+          <thead>
+            <tr>
+              <th scope="col">Report ID</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>Upper Middle Road and Trafalgar Road, Oakville</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
+      <!-- Declined Reports -->
       <div id="menu2" class="tab-pane fade">
-
-        <table class="table table-bordered tab-paneshow">
-            <thead>
-              <tr>
-                <th scope="col">Report ID</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>Upper Middle Road and Trafalgar Road, Oakville</td>
-              </tr>
-            </tbody>
-          </table>
+        <table class="table table-bordered tab-pane fade show tabHeadings">
+          <thead>
+            <tr>
+              <th scope="col">Report ID</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>Upper Middle Road and Trafalgar Road, Oakville</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
     </div>
 
     </div>
+    <!-- End of Accidents Tab -->
+
+
+
+
+
+
+
+
+
+
 
 
       <!-- Account Page -->
@@ -184,7 +185,40 @@
 
       </div>
 
+      <!-- Contact Page -->
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+        <!-- <div  id = "contact" class="bg"> -->
+                <div class = "table-responsive">
+                    <!-- <div class = "col-lg-6 col-sm-12 contact-bkg" > -->
+                        <h1 class="hTitle">Contact</h1>
+                    <!-- </div> -->
 
+                    <div class= "col-sm-6 col-lg-6 formCol table-responsive">
+                        <form action="processes/processing-contact.php" method="POST">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="ie.John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="ie.Doe">
+                                </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" name= "email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name= "message" id="message" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </form>
+                     </div>
+            </div>
+        <!-- </div> -->
+
+
+      </div>
     </div>
 
   </div>

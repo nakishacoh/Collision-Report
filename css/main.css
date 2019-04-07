@@ -10746,6 +10746,9 @@ i {
     /*width: 200px;
     height: 100px;*/
   }
+  .tabHeadings {
+    margin-top: 2em;
+  }
   /* Subtitles */
   .hTitle {
     padding-bottom: 1.5em;
