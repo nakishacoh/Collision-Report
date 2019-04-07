@@ -1,19 +1,24 @@
 <?php
 // session_start();
-// receive username and password
+// receive values from form
 $injuries = $_POST['injuries'];
 
 // check admin table for valid username and password
-$dbusername = "razaalin_alina";
-$dbpassword = "iZKoDeSbtiPLYSGT";
-$pdo = new PDO("mysql:host=localhost;dbname=razaalin_collision-report", $dbusername, $dbpassword);
+$dsn = "mysql:host=localhost;dbname=carsokai_collision_report;charset=utf8mb4";
+$dbusername = "carsokai_imm";
+$dbpassword = "AdpteGfKipeuOuJx";
 
+// connect to database
+$pdo = new PDO($dsn, $dbusername, $dbpassword);
+
+// prepare insert
 $stmt = $pdo->prepare("
 	INSERT INTO `injuries` (`injuryID`, `injury`)
 	VALUES (NULL, '$injuries')");
 
+// insert into database
 $stmt->execute();
 
-header("Location: /collision-report/form/#confirmationForm");
-
+// redirect user to next section of form
+// header("Location: /collision-report/form/#confirmationForm");
 ?>
