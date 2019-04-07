@@ -48,7 +48,7 @@
         <script>
             var map;
             var marker;
-            var infowindow;
+            var infoWindow;
             var messagewindow;
 
             function initMap() {
@@ -58,7 +58,26 @@
                     zoom: 13
                 });
 
-                infowindow = new google.maps.InfoWindow({
+                // HTML5 geolocation
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        infoWindow.setPosition(pos);
+                        // infoWindow.setContent('You are here.');
+                        infoWindow.open(map);
+                        map.setCenter(pos);
+                    }, function() {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                    });
+                // Browser doesn't support geolocation
+                } else {
+                    handleLocationError(false, infoWindow, map.getCenter());
+                }
+
+                infoWindow = new google.maps.InfoWindow({
                     content: document.getElementById('form')
                 });
 
@@ -72,9 +91,17 @@
                         map: map
                     });
                     google.maps.event.addListener(marker, 'click', function() {
-                        infowindow.open(map, marker);
+                        infoWindow.open(map, marker);
                     });
                 });
+            }
+
+            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                infoWindow.setPosition(pos);
+                infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+                infoWindow.open(map);
             }
 
             function saveData() {
@@ -87,7 +114,7 @@
 
                 downloadUrl(url, function(data, responseCode) {
                     if (responseCode == 200 && data.length <= 1) {
-                        infowindow.close();
+                        infoWindow.close();
                         messagewindow.open(map, marker);
                     }
                 });
