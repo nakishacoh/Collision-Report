@@ -11,7 +11,7 @@
 </head>
 <body id="body">
   <!-- <div id="wrapper"> -->
-    <!-- Navigation -->
+    <!-- Desktop Navigation -->
       <div class="nav flex-column nav-pills dash navBack" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <span class="navbar-brand mb-0"><h2 class="alignTitle">Collision Report</h2></span>
         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
@@ -20,6 +20,22 @@
         <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
         <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
       </div>
+
+      <!-- Mobile Nav -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mobileNav">
+      <h2>Collision Report</h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+        <a class="nav-link nav-child" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Report Accident</a>
+        <a class="nav-link nav-child" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Account</a>
+        <a class="nav-link nav-child" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
+        <a class="nav-link logout nav-child" id="#logout"  data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Logout</a>
+        </div>
+      </nav>
     <!-- End of Navigation -->
 
 
@@ -60,35 +76,47 @@
 
       <!-- Account Page -->
       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-        <h1 class="hTitle">General Account Settings</h1>
+        <h1 class="hTitle">Account Settings</h1>
 
-        <table id=" formCols">
-                  <div class="">
-                    <div class = "row">
-                      <div class="col-6 col-sm-3"><label for="firstName">Name</label></div>
-                      <div class="col-6 col-sm-3">Joanne Day</div>
-                      <button type="button" class="dashBtn btn btn-primary">Edit</button>
-                    </div>
-                    <!-- Force next columns to break to new line -->
-                    <div class="row">
-                      <div class="">
-                        <label for="firstName">
-                          Insurance
-                        </label>
-                      </div>
-                      <div class="">State Farm</div>
-                      <button type="button" class="btn btn-primary">Edit</button>
-                    </div>
-                    <div class="w-100"></div>
-                    <div class="col-6 col-sm-3"><label for="firstName">Email</label></div>
-                    <div class="col-6 col-sm-3">jd@gmail.com</div>
-                    <button type="button" class="btn btn-primary">Edit</button>
+        <table id="" class="table tab-pane fade show">
 
-                    <div class="w-100"></div>
-                    <div class="col-6 col-sm-3"><label for="firstName">Phone Number</label></div>
-                    <div class="col-6 col-sm-3">555555555</div>
-                    <button type="button" class="btn btn-primary">Edit</button>
-                  </div>
+        <tbody class="acctInfo">
+          <!-- Name Column -->
+          <tr>
+            <th scope="row">Name</th>
+            <!-- <td>Mark</td> -->
+            <!-- <td>Otto</td> -->
+            <td> Joanne Day</td>
+            <td> <button type="button" class="btn btn-primary">Edit</button></td>
+          </tr>
+
+           <!-- Insurance Column -->
+           <tr>
+            <th scope="row">Insurance</th>
+            <!-- <td>Mark</td> -->
+            <!-- <td>Otto</td> -->
+            <td>State Farm</td>
+            <td> <button type="button" class="btn btn-primary">Edit</button></td>
+          </tr>
+
+           <!-- Email Column -->
+           <tr>
+            <th scope="row">Email</th>
+            <!-- <td>Mark</td> -->
+            <!-- <td>Otto</td> -->
+            <td>jd@gmail.com</td>
+            <td> <button type="button" class="btn btn-primary">Edit</button></td>
+          </tr>
+
+           <!-- Phone Number Column -->
+           <tr>
+            <th scope="row">Phone Number</th>
+            <!-- <td>Mark</td> -->
+            <!-- <td>Otto</td> -->
+            <td>555-555-5555</td>
+            <td> <button type="button" class="btn btn-primary">Edit</button></td>
+          </tr>
+        </tbody>
         </table>
 
       </div>
@@ -96,12 +124,12 @@
       <!-- Contact Page -->
       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
         <!-- <div  id = "contact" class="bg"> -->
-                <div class = "">
+                <div class = "table-responsive">
                     <!-- <div class = "col-lg-6 col-sm-12 contact-bkg" > -->
                         <h1 class="hTitle">Contact</h1>
                     <!-- </div> -->
 
-                    <div class= "col-lg-6 col-sm-12 formCol">
+                    <div class= "col-sm-6 col-lg-6 formCol table-responsive">
                         <form action="processes/processing-contact.php" method="POST">
                                 <div class="form-group">
                                     <label for="firstName">First Name</label>
@@ -124,6 +152,8 @@
                      </div>
             </div>
         <!-- </div> -->
+
+        
       </div>
     </div>
 

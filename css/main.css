@@ -10699,69 +10699,114 @@ i {
   border: 1px solid #1982C4;
 }
 
-#html, #body {
-  height: 100%;
-  margin: 0;
-  min-height: 100%;
-}
-
-.wrapper {
-  position: relative;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-}
-
-.navBack {
-  background-color: #1982C4;
-  height: 100%;
-  position: absolute;
-}
-
-.dash {
-  width: 17em;
-}
-
 .nav-child {
   background-color: #217eba !important;
   color: white;
 }
 
-.navBack .nav-link:focus {
-  background-color: #707070 !important;
-}
-
-/* Panel*/
-.content {
-  position: absolute;
-  top: 80px;
-  left: 15em;
-  right: 5em;
-  font-size: 1.5em;
-  /*width: 200px;
+@media (min-width: 500px) {
+  #html, #body {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+  }
+  .wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+  }
+  .navBack {
+    background-color: #1982C4;
+    height: 100%;
+    position: absolute;
+  }
+  .navBack a {
+    color: white;
+  }
+  #mobileNav {
+    display: none !important;
+  }
+  .navBack .nav-link:focus {
+    background-color: #707070 !important;
+  }
+  .dash {
+    width: 17em;
+  }
+  .logout {
+    margin-bottom: 0;
+  }
+  /* Panel*/
+  .content {
+    position: absolute;
+    top: 80px;
+    left: 15em;
+    right: 5em;
+    font-size: 1.5em;
+    /*width: 200px;
     height: 100px;*/
+  }
+  /* Subtitles */
+  .hTitle {
+    padding-bottom: 1.5em;
+  }
+  /* Logo */
+  .alignTitle {
+    padding-left: .5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+  }
 }
 
-.navBack a {
-  color: white;
-}
-
-.logout {
-  margin-bottom: 0;
-}
-
-/* Logo */
-.alignTitle {
-  padding-left: .5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  color: white;
+@media (max-width: 500px) {
+  #html, #body {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+  }
+  .alignTitle {
+    padding-left: .5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+  }
+  .navBack {
+    display: none !important;
+  }
+  #mobileNav {
+    background-color: #1982C4 !important;
+    z-index: 9999;
+  }
+  #mobileNav h2 {
+    color: #fff;
+  }
+  #mobileNav .nav-link:focus {
+    background-color: #707070 !important;
+  }
+  .hTitle {
+    padding-bottom: 1em;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .content {
+    position: absolute;
+    top: 80px;
+    left: 1em;
+    right: 1em;
+    /*width: 200px;
+        height: 100px;*/
+  }
 }
 
 /* Account Page */
-/* Contact */
-/* Subtitles */
-.hTitle {
-  padding-bottom: 1.5em;
+.row {
+  margin-bottom: 15px !important;
 }
+
+.acctInfo tr {
+  margin-left: 10px;
+}
+
+/* Contact */
 /*# sourceMappingURL=main.css.map */
