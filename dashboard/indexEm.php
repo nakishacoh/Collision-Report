@@ -43,17 +43,17 @@
     <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
       <h1 class="hTitle">Accidents</h1>
 
-      <ul class="nav nav-tabs d-flex justify-content-between">
-        <li class="active"><a data-toggle="tab" href="#pendingReport">Pending Reports</a></li>
-        <li><a data-toggle="tab" href="#menu1">Approved</a></li>
-        <li><a data-toggle="tab" href="#menu2">Declined</a></li>
+      <ul class="nav nav-tabs d-flex justify-content-between mainHeadings">
+        <li class="active"><a data-toggle="tab" href="#pendingReport"><h2>Pending Reports</h2></a></li>
+        <li><a data-toggle="tab" href="#menu1"><h2>Approved</h2></a></li>
+        <li><a data-toggle="tab" href="#menu2"><h2>Declined</h2></a></li>
       </ul>
 
     <div class="tab-content">
 
       <!-- Pending Reports -->
       <div id="pendingReport" class="tab-pane fade in">
-        <table class="table table-bordered tab-pane active tabHeadings">
+        <table class="table table-bordered tab-pane tabHeadings show">
           <thead>
             <tr>
               <th scope="col">Report ID</th>

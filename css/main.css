@@ -10746,6 +10746,14 @@ i {
     /*width: 200px;
     height: 100px;*/
   }
+  .mainHeadings ul li:target {
+    text-decoration: underline !important;
+    color: #707070 !important;
+  }
+  .mainHeadings ul li:focus {
+    text-decoration: underline !important;
+    color: #707070 !important;
+  }
   .tabHeadings {
     margin-top: 2em;
   }
