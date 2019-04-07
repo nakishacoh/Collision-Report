@@ -40,16 +40,11 @@
 
   <div class="tab-content content" id="v-pills-tabContent" role="tabpanel">
 
-<<<<<<< HEAD
     <!-- Accidents Page -->
-=======
-    <!-- Home Page -->
->>>>>>> 5164fd8aa9d79366bf09613766b25526d4080ac8
     <!-- <h2 class="hTitle">Home</h2> -->
     <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
       <h1 class="hTitle">Accidents</h1>
 
-<<<<<<< HEAD
       <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#pendingReport">Pending Reports</a></li>
       <li><a data-toggle="tab" href="#menu1">Approved</a></li>
@@ -73,30 +68,6 @@
       </div>
     </div>
 
-=======
-      <table class="table table-bordered tab-pane fade show">
-        <thead>
-          <tr>
-            <th scope="col">Report ID</th>
-            <!-- <th scope="col">First</th> -->
-            <!-- <th scope="col">Last</th> -->
-            <th scope="col">Location</th>
-            <th scope="col">Status</th>
-            <th scope="col">Edit</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <!-- <td>Mark</td> -->
-            <!-- <td>Otto</td> -->
-            <td>Upper Middle Road and Trafalgar Road, Oakville</td>
-            <td>Pending</td>
-            <td> <button type="button" class="btn btn-primary">Edit</button></td>
-          </tr>
-        </tbody>
-      </table>
->>>>>>> 5164fd8aa9d79366bf09613766b25526d4080ac8
     </div>
 
 
