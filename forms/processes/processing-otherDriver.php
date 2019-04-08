@@ -14,9 +14,7 @@ $dbpassword = "AdpteGfKipeuOuJx";
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
 
 // prepare insert
-$stmt = $pdo->prepare("
-	INSERT INTO `otherDriver` (`driverID`, `firstname`, `lastname`, `number`)
-	VALUES (NULL, '$firstname', '$lastname', '$number')");
+$stmt = $pdo->prepare("INSERT INTO `otherdriver` (`driverID`, `firstname`, `lastname`, `number`) VALUES (NULL, '$firstname', '$lastname', '$number')");
 
 // insert into database
 $stmt->execute();

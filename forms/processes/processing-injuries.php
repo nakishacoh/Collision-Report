@@ -12,9 +12,7 @@ $dbpassword = "AdpteGfKipeuOuJx";
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
 
 // prepare insert
-$stmt = $pdo->prepare("
-	INSERT INTO `injuries` (`injuryID`, `injury`)
-	VALUES (NULL, '$injuries')");
+$stmt = $pdo->prepare("INSERT INTO `injuries` (`injuryID`, `injury`) VALUES (NULL, '$injuries')");
 
 // insert into database
 $stmt->execute();

@@ -112,7 +112,7 @@ function formDriverFunction(e){
     var lastname = document.getElementById("lastname");
     var number = document.getElementById("number");
     // send values to the database
-    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-otherDriver.php", true);
+    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-otherDriver.php", true);
     myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     myRequest.send("firstname="+firstname.value+
                     "&lastname="+lastname.value+
@@ -140,7 +140,7 @@ function formNotesFunction(e){
     var date = document.getElementById("date");
     var time = document.getElementById("time");
     // send values to the database
-    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-notes.php", true);
+    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-notes.php", true);
     myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     myRequest.send("notes="+notes.value+
                     "&date="+date.value+
@@ -166,7 +166,7 @@ function formInjuriesFunction(e){
     // grab inputs from form
     var injuries = document.getElementById("injuries");
     // send values to the database
-    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-injuries.php", true);
+    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-injuries.php", true);
     myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     myRequest.send("injuries="+injuries.value);
     // switch user to next section of form
@@ -193,7 +193,7 @@ function formConfirmationFunction(e){
     var email = document.getElementById("email");
     var password = document.getElementById("password");
     // send values to the database
-    myRequest.open("POST", "http://localhost/collision-report/form/processes/processing-confirmation.php", true);
+    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-confirmation.php", true);
     myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     myRequest.send("firstname="+fname.value+
                     "&lastname="+lname.value+

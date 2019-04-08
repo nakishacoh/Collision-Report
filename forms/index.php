@@ -40,10 +40,10 @@ include '../header.php';
 
         <div id="driverForm" class="col-lg-6 col-sm-12">
             <h2>Other Person(s) Involved</h2>
-            <form id="formDriver"  method= "POST">
+            <form method="POST" id="formDriver">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control"  name="firstname"  id= "firstname" placeholder="e.g. John">
+                    <input type="text" class="form-control"  name="firstname"  id="firstname" placeholder="e.g. John">
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name</label>
@@ -88,7 +88,7 @@ include '../header.php';
         <!-- form for listing the injuries sustained -->
         <div id="injuriesForm" class="col-lg-6 col-sm-12">
             <h2>Injuries</h2>
-            <form class="" action="processes/processing-injuries.php" method="POST" id= "formInjuries">
+            <form method="POST" id="formInjuries">
                 <div class="form-group">
                     <label for="injuries">List any injuries sustained</label>
                     <textarea class="form-control" name="injuries" id="injuries" rows="3"></textarea>
@@ -101,7 +101,7 @@ include '../header.php';
         <div id="confirmationForm" class="col-lg-6 col-sm-12">
             <h2>Confirmation</h2>
             <p>Please create an account for easy access to your form.</p>
-            <form id="formConfirmation" method="POST">
+            <form method="POST" id="formConfirmation">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control" name="firstname" id="fname" placeholder="e.g. John">
@@ -127,5 +127,5 @@ include '../header.php';
 </div>
 
 <?php
-    include '../footer.php';
+include '../footer.php';
 ?>
