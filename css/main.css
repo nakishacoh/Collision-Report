@@ -9730,12 +9730,16 @@ button.dashBtn.btn.btn-primary {
 }
 
 #location {
+  width:100%;
   padding: 2% 0 0 0;
-  height: 400px;
+  text-align: center;
+  /*height: 400px;*/
 }
 
 #map {
-  height: 100%;
+  margin-left: 0;
+  width:100%;
+  height: 400px;
 }
 
 .contact-bkg {

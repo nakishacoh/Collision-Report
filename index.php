@@ -83,7 +83,7 @@ include 'header.php';
 </div>
 
 <!-- Location -->
-<div class="container" id="location">
+<div class="container2" id="location">
     <!-- <div class="row">
         <h2>Find the closest collision center</h2>
     </div> -->
