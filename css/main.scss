@@ -8,7 +8,7 @@ $secondary-color: #707070;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Home 
+// Home
 .navbar {
     background-color: $main-color !important;
     .nav-link,.navbar-brand {
@@ -84,6 +84,13 @@ button.dashBtn.btn.btn-primary {
     padding: 10% 0%;
 }
 
+.contact-bkg {
+    background-color: white;
+    color: #707070;
+    padding: 5%;
+    margin: 2%;
+}
+
 #location {
     padding: 2% 0 0 0;
     height: 400px;
@@ -91,12 +98,6 @@ button.dashBtn.btn.btn-primary {
 
 #map {
     height: 100%;
-}
-
-.contact-bkg {
-    background-color: white;
-    color: #707070;
-    padding: 10% 0 10% 3%;
 }
 
 footer {

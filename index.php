@@ -53,10 +53,10 @@ include 'header.php';
 <!-- Contact -->
 <div id="contact" class="bg">
     <div class="d-flex flex-wrap">
-        <div class="col-lg-6 col-sm-12 contact-bkg">
+        <div class="col-lg-4 col-sm-12 contact-bkg text-center">
             <h2>Contact</h2>
-            <p>Get in touch by sending a message or calling us at the location closest to you.</p>
-            <a href="#location"><button class="btn-primary btn-lg">Find Location</button></a>
+            <p>Get in touch by sending us a message or you can give us a call at the location nearest to you.</p>
+            <a href="#location"><button class="btn-primary btn-lg btn-block">Find Location</button></a>
         </div>
         <div class="col-lg-6 col-sm-12 formCol">
             <form action="processes/processing-contact.php" method="POST">
