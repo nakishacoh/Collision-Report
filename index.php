@@ -84,9 +84,11 @@ include 'header.php';
 
 <!-- Location -->
 <div class="container2" id="location">
-    <!-- <div class="row">
-        <h2>Find the closest collision center</h2>
-    </div> -->
+    <div class="row">
+        <div class="col text-center">
+            <h2>Find the closest collision center</h2>
+        </div>
+    </div>
     <div class="row" id="map"></div>
 </div>
 
