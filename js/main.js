@@ -112,7 +112,7 @@ function formDriverFunction(e){
     var lastname = document.getElementById("lastname");
     var number = document.getElementById("number");
     // send values to the database
-    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-otherDriver.php", true);
+    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-other-driver.php", true);
     myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     myRequest.send("firstname="+firstname.value+
                     "&lastname="+lastname.value+
