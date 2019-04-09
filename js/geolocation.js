@@ -1,3 +1,5 @@
+console.log("Geolocation connected");
+
 var map, service, infowindow;
 function initMap() {
     // set location if current location cannot be found
@@ -58,7 +60,7 @@ function createMarker(place) {
         position: place.geometry.location
     });
     // click on marker and get details
-    // ***** we should set some more things to be populated in window 
+    // ***** we should set some more things to be populated in window
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.setContent(place.name);
         infowindow.open(map, this);

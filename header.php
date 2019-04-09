@@ -16,7 +16,7 @@ define('ROOT_URI', 'http://localhost/collision-report/');
 
         <!-- navbar -->
         <nav class="navbar fixed-top navbar-expand-lg bg-primary" id="navbar">
-            <a class="navbar-brand" href="<?= ROOT_URI ?>#home">LOGO</a>
+            <a class="navbar-brand" href="<?= ROOT_URI ?>#home">OCR</a>
             <button class="navbar-toggler navbar-dark bg-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

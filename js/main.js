@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    console.log("connected");
+    console.log("Main connected");
 
     // pagination of forms
     var driverBtn;

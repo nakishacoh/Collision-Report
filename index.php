@@ -10,8 +10,8 @@ include 'header.php';
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center" id="home-info">
                 <div id="home-content">
-                    <h1 class="display-1">LOGO</h1>
-                    <h3>A bit of information about the site</h3>
+                    <h1 class="display-1">OCR</h1>
+                    <h3>Online Collision Report</h3>
                 </div>
                 <div id="button-container" class="row justify-content-center">
                     <div class="col-lg-4 col-md-12 col-sm-12" >
@@ -40,7 +40,7 @@ include 'header.php';
         <div class="col text-center">
             <h2>About</h2>
             <p>
-                Logo understands how stressful filing a collision report report can be. Our goal is to make that process easier and more accessible for everyone.
+                OCR understands how stressful filing a collision report report can be. Our goal is to make that process easier and more accessible for everyone. Use our online reporting system today!
             </p>
         </div>
     </div>
@@ -55,7 +55,7 @@ include 'header.php';
             <a href="#location"><button class="btn-primary btn-lg btn-block">Find Location</button></a>
         </div>
         <div class="col-lg-6 col-sm-12 formCol">
-            <form action="processes/processing-contact.php" method="POST">
+            <form method="POST" id="contactForm">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control"  name="firstname" id="firstname" placeholder="e.g. John">
@@ -72,7 +72,7 @@ include 'header.php';
                     <label for="message">Message</label>
                     <textarea class="form-control" name="message" id="message" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitContact">Send Message</button>
             </form>
         </div>
     </div>
