@@ -44,31 +44,93 @@
 
     <!-- Home Page -->
     <!-- <h2 class="hTitle">Home</h2> -->
-    <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-      <h1 class="hTitle">Home</h1>
+    
 
-      <table class="table table-bordered tab-pane fade show">
-        <thead>
-          <tr>
-            <th scope="col">Report ID</th>
-            <!-- <th scope="col">First</th> -->
-            <!-- <th scope="col">Last</th> -->
-            <th scope="col">Location</th>
-            <th scope="col">Status</th>
-            <th scope="col">Edit</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <!-- <td>Mark</td> -->
-            <!-- <td>Otto</td> -->
-            <td>Upper Middle Road and Trafalgar Road, Oakville</td>
-            <td>Pending</td>
-            <td> <button type="button" class="btn btn-primary">Edit</button></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="tab-pane active table-responsive" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+
+      <div id="editForm">
+        <div>
+            <form method="POST" id="formConfirmation">
+              <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input type="text" class="form-control" name="firstname" id="fname" placeholder="e.g. John">
+                  </div>
+                  <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" class="form-control"  name="lastname" id="lname" placeholder="e.g. Doe">
+                  </div>
+                   <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input  type="tel" name="number" class="form-control" id="number" aria-describedby="phoneNumber" placeholder="e.g. 905-123-4321">
+                </div>
+                  <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" name="password" class="form-control" id="password" aria-describedby="password" placeholder="Password">
+                  </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea class="form-control" name="notes" id="notes" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="form-group col-2.5 ">
+                            <label for="date">Date</label>
+                            <input type="date" name= "date" class="form-control"  id="date" rows="3">
+                        </div>
+                    </div>
+                </div>
+                <div class= "form-group">
+                    <div class="form-row">
+                        <div class="form-group col-3 ">
+                            <label for="time">Time</label>
+                            <input type="time"  name="time" class="form-control" id="time" rows="3">
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="form-group">
+                        <label for="injuries">List any injuries sustained</label>
+                        <textarea class="form-control" name="injuries" id="injuries" rows="3"></textarea>
+                </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" id="update">Update</button>
+              </form>
+          </div>
+    </div>
+
+
+      
+      <div id="form">
+        <h1 class="hTitle">Home</h1>
+        <table class="table table-bordered tab-pane fade show">
+          <thead>
+            <tr>
+              <th scope="col">Report ID</th>
+              <!-- <th scope="col">First</th> -->
+              <!-- <th scope="col">Last</th> -->
+              <th scope="col">Location</th>
+              <th scope="col">Status</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <!-- <td>Mark</td> -->
+              <!-- <td>Otto</td> -->
+              <td>Upper Middle Road and Trafalgar Road, Oakville</td>
+              <td>Pending</td>
+              <td> <button type="button" class="btn btn-primary" id="edit">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
       <!-- Report Accident Page -->
@@ -161,7 +223,8 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/dashboard/script/script.js"></script>
+<!-- <script src="http://cohennak.dev.fast.sheridanc.on.ca/Collision-Report/dashboard/script/script.js"></script> -->
+<script src="script/script.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
