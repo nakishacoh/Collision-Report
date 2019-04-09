@@ -2,6 +2,7 @@ $( document ).ready(function() {
     console.log("Forms connected");
 
     // pagination of forms
+    var locationBtn;
     var driverBtn;
     var cameraBtn;
     var notesBtn;
@@ -18,6 +19,7 @@ $( document ).ready(function() {
              $("#notesForm").hide();
              $("#injuriesForm").hide();
              $("#confirmationForm").hide();
+            $("#cameraForm").hide();
         })
     }
     
@@ -27,6 +29,7 @@ $( document ).ready(function() {
             $("#driverForm").show();
             $('#cameraForm').hide();
             $("#notesForm").hide();
+            $("#locationForm").hide();
             $("#injuriesForm").hide();
             $("#confirmationForm").hide();
             console.log("driver")
@@ -39,6 +42,7 @@ $( document ).ready(function() {
             $('#cameraForm').show();
             $("#driverForm").hide();
             $("#notesForm").hide();
+            $("#locationForm").hide();
             $("#injuriesForm").hide();
             $("#confirmationForm").hide();
             console.log("camera")
@@ -51,6 +55,7 @@ $( document ).ready(function() {
             $("#notesForm").show();
             $("#driverForm").hide();
             $('#cameraForm').hide();
+            $("#locationForm").hide();
             $("#injuriesForm").hide();
             $("#confirmationForm").hide();
             console.log("notes")
@@ -63,6 +68,7 @@ $( document ).ready(function() {
             $("#injuriesForm").show();
             $("#notesForm").hide();
             $("#driverForm").hide();
+            $("#locationForm").hide();
             $('#cameraForm').hide();
             $("#confirmationForm").hide();
             console.log("injuries")
