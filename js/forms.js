@@ -1,8 +1,9 @@
 $( document ).ready(function() {
-    console.log("Main connected");
+    console.log("Forms connected");
 
     // pagination of forms
     var driverBtn;
+    var cameraBtn;
     var notesBtn;
     var injuriesBtn;
     var confirmationBtn;
@@ -12,10 +13,23 @@ $( document ).ready(function() {
     if (driverBtn) {
         driverBtn.click(function(){
             $("#driverForm").show();
+            $('#cameraForm').hide();
             $("#notesForm").hide();
             $("#injuriesForm").hide();
             $("#confirmationForm").hide();
             console.log("driver")
+        })
+    }
+
+    cameraBtn=$("#page-camera");
+    if (cameraBtn) {
+        cameraBtn.click(function(){
+            $('#cameraForm').show();
+            $("#driverForm").hide();
+            $("#notesForm").hide();
+            $("#injuriesForm").hide();
+            $("#confirmationForm").hide();
+            console.log("camera")
         })
     }
 
@@ -24,6 +38,7 @@ $( document ).ready(function() {
         notesBtn.click(function(){
             $("#notesForm").show();
             $("#driverForm").hide();
+            $('#cameraForm').hide();
             $("#injuriesForm").hide();
             $("#confirmationForm").hide();
             console.log("notes")
@@ -36,6 +51,7 @@ $( document ).ready(function() {
             $("#injuriesForm").show();
             $("#notesForm").hide();
             $("#driverForm").hide();
+            $('#cameraForm').hide();
             $("#confirmationForm").hide();
             console.log("injuries")
         })
@@ -47,6 +63,7 @@ $( document ).ready(function() {
             $("#confirmationForm").show();
             $("#notesForm").hide();
             $("#driverForm").hide();
+            $('#cameraForm').hide();
             $("#injuriesForm").hide();
             console.log("confirmation")
         })
@@ -117,6 +134,30 @@ function formDriverFunction(e){
     myRequest.send("firstname="+firstname.value+
                     "&lastname="+lastname.value+
                     "&number="+number.value);
+    // switch user to next section of form
+    changeForm();
+};
+
+// submitting camera form
+var cameraSubmitBtn = document.getElementById("cameraSubmit")
+// if the button is clicked run the function
+if (cameraSubmitBtn){
+    cameraSubmitBtn.addEventListener("click",  formCameraFunction, false);
+};
+function formCameraFunction(e){
+    // prevent form from submitting automatically
+    e.preventDefault();
+    // connecting
+    var myRequest = new XMLHttpRequest;
+    myRequest.onreadystatechange = function(){
+        if(myRequest.readyState === 4){}
+    };
+    // grab inputs from form
+    var image = document.getElementById("image");
+    // send values to the database
+    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-camera.php", true);
+    myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    myRequest.send("image="+image.value);
     // switch user to next section of form
     changeForm();
 };
