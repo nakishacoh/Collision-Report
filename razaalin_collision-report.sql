@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 07, 2019 at 03:03 PM
--- Server version: 5.5.61-cll
--- PHP Version: 7.2.7
+-- Host: 127.0.0.1
+-- Generation Time: Apr 09, 2019 at 08:36 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,6 +39,17 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `camera`
+--
+
+CREATE TABLE `camera` (
+  `cameraID` int(11) NOT NULL,
+  `image` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `contact`
 --
 
@@ -61,13 +72,17 @@ CREATE TABLE `injuries` (
   `injury` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `injuries`
+-- Table structure for table `location`
 --
 
-INSERT INTO `injuries` (`injuryID`, `injury`) VALUES
-(1, 'broken leg'),
-(2, 'fractured wrist');
+CREATE TABLE `location` (
+  `locationID` int(11) NOT NULL,
+  `address` varchar(1000) NOT NULL,
+  `city` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -82,34 +97,18 @@ CREATE TABLE `notes` (
   `time` time NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `notes`
---
-
-INSERT INTO `notes` (`notesID`, `notes`, `date`, `time`) VALUES
-(1, 'ffhaf;a', '2019-01-03', '14:02:00'),
-(2, 'Ouch', '2019-04-05', '17:00:00');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `otherDriver`
+-- Table structure for table `otherdriver`
 --
 
-CREATE TABLE `otherDriver` (
+CREATE TABLE `otherdriver` (
   `driverID` int(11) NOT NULL,
   `firstname` varchar(200) NOT NULL,
   `lastname` varchar(200) NOT NULL,
   `number` varchar(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `otherDriver`
---
-
-INSERT INTO `otherDriver` (`driverID`, `firstname`, `lastname`, `number`) VALUES
-(1, 'Alina', 'Raza', '6473919766'),
-(2, 'Kate', 'Carson', '1234567890');
 
 -- --------------------------------------------------------
 
@@ -141,18 +140,26 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`userID`, `firstname`, `lastname`, `email`, `password`) VALUES
-(1, 'Alina', 'Raza', 'a@alina.com', '12345'),
-(2, 'Syed', 'Raza', 'hellotest', 'Testtest1'),
-(3, 'Syed', 'Raza', 'hellotest', 'Testtest1'),
-(4, 'Kate', 'Carson', 'kate-carson@outlook.com', '123');
-
---
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`adminID`);
+
+--
+-- Indexes for table `camera`
+--
+ALTER TABLE `camera`
+  ADD PRIMARY KEY (`cameraID`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `injuries`
@@ -161,15 +168,21 @@ ALTER TABLE `injuries`
   ADD PRIMARY KEY (`injuryID`);
 
 --
+-- Indexes for table `location`
+--
+ALTER TABLE `location`
+  ADD PRIMARY KEY (`locationID`);
+
+--
 -- Indexes for table `notes`
 --
 ALTER TABLE `notes`
   ADD PRIMARY KEY (`notesID`);
 
 --
--- Indexes for table `otherDriver`
+-- Indexes for table `otherdriver`
 --
-ALTER TABLE `otherDriver`
+ALTER TABLE `otherdriver`
   ADD PRIMARY KEY (`driverID`);
 
 --
@@ -189,22 +202,34 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `camera`
+--
+ALTER TABLE `camera`
+  MODIFY `cameraID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `injuries`
 --
 ALTER TABLE `injuries`
-  MODIFY `injuryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `injuryID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `location`
+--
+ALTER TABLE `location`
+  MODIFY `locationID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `notesID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `notesID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `otherDriver`
+-- AUTO_INCREMENT for table `otherdriver`
 --
-ALTER TABLE `otherDriver`
-  MODIFY `driverID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `otherdriver`
+  MODIFY `driverID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `reports`
@@ -216,7 +241,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
