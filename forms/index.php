@@ -101,7 +101,7 @@ include '../header.php';
         <div id="confirmationForm" class="col-lg-6 col-sm-12">
             <h2>Confirmation</h2>
             <p>Please create an account for easy access to your form.</p>
-            <form method="POST" id="formConfirmation">
+            <form id="formConfirmation" method="POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control" name="firstname" id="fname" placeholder="e.g. John">
@@ -111,7 +111,7 @@ include '../header.php';
                     <input type="text" class="form-control"  name="lastname" id="lname" placeholder="e.g. Doe">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
+                    <label for="email">Email address</label>
                     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <div class="form-group">
