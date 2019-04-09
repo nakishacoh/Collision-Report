@@ -1,4 +1,6 @@
 <?php
+$page_title = "Form";
+$page = "form";
 include '../header.php';
 ?>
 
@@ -17,6 +19,9 @@ include '../header.php';
         </li>
         <li class="page-item active">
             <a class="page-link" id="page-driver" href="http://localhost/collision-report/forms/">Other Driver</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" id="page-camera" href="http://localhost/collision-report/forms/#cameraForm">Damages</a>
         </li>
         <li class="page-item">
             <a class="page-link" id="page-notes" href="http://localhost/collision-report/forms/#notesForm">Notes</a>
@@ -54,6 +59,19 @@ include '../header.php';
                     <input  type="tel" name="number" class="form-control" id="number" aria-describedby="phoneNumber" placeholder="e.g. 905-123-4321">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block" id="driverSubmit">Continue</button>
+            </form>
+        </div>
+
+        <!-- form for file upload of damages, license, and registration -->
+        <div id="cameraForm" class="col-lg-6 col-sm-12">
+            <h2>File Upload</h2>
+            <p>Upload images of damages to your car and the other person(s) involved plus their license and registration.</p>
+            <form method="POST" id="formCamera" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" class="form-control" name="image" id="image">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="cameraSubmit">Continue</button>
             </form>
         </div>
 
