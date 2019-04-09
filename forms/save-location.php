@@ -17,7 +17,7 @@ $dbpassword = "AdpteGfKipeuOuJx";
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
 
 // prepare insert
-$stmt = $pdo->prepare("INSERT INTO `location`(`id`, `name`, `address`, `lat`, `lng`, `type`) VALUES (NULL, '$name', '$address', '$lat', '$lng', '$type')");
+$stmt = $pdo->prepare("INSERT INTO `location` (`locationID`, `name`, `address`, `lat`, `lng`, `type`) VALUES (NULL, '$name', '$address', '$lat', '$lng', '$type')");
 
 // insert into database
 $stmt->execute();

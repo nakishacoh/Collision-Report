@@ -50,18 +50,19 @@
             var marker;
             var infoWindow;
             var messagewindow;
+            var pos;
 
             function initMap() {
-                var california = {lat: 37.4419, lng: -122.1419};
+                // var california = {lat: 37.4419, lng: -122.1419};
                 map = new google.maps.Map(document.getElementById('map'), {
-                    center: california,
-                    zoom: 13
+                    // center: california,
+                    zoom: 15
                 });
 
                 // HTML5 geolocation
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(function(position) {
-                        var pos = {
+                        pos = {
                             lat: position.coords.latitude,
                             lng: position.coords.longitude
                         };
@@ -108,7 +109,7 @@
                 var name = escape(document.getElementById('name').value);
                 var address = escape(document.getElementById('address').value);
                 var type = document.getElementById('type').value;
-                var latlng = marker.getPosition();
+                var latlng = marker.getPosition(pos);
                 var url = 'save-location.php?name=' + name + '&address=' + address +
                 '&type=' + type + '&lat=' + latlng.lat() + '&lng=' + latlng.lng();
 
