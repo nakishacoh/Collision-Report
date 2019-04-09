@@ -1,12 +1,8 @@
 <?php
-
 $page_title = "Home";
 $page = "home";
-
 include 'header.php';
-
 ?>
-
 
 <!-- Home -->
 <div class="bg" id="home">
@@ -19,14 +15,14 @@ include 'header.php';
                 </div>
                 <div id="button-container" class="row justify-content-center">
                     <div class="col-lg-4 col-md-12 col-sm-12" >
-                        <a href="http://localhost/Collision-Report/forms">
+                        <a href="forms">
                             <button type="button" class="btn btn-primary btn-lg btn-block ">
                                 REPORT AN ACCIDENT
                             </button>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                        <a href="http://localhost/Collision-Report/signIn">
+                        <a href="signIn">
                             <button type="button" class="btn btn-primary btn-lg btn-block">
                                 SIGN IN
                             </button>
@@ -93,7 +89,5 @@ include 'header.php';
 </div>
 
 <?php
-
 include 'footer.php';
-
 ?>
