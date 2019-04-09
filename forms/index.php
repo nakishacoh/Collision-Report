@@ -18,7 +18,10 @@ include '../header.php';
             </a>
         </li>
         <li class="page-item active">
-            <a class="page-link" id="page-driver" href="http://localhost/collision-report/forms/">Other Driver</a>
+            <a class="page-link" id="page-location" href="http://localhost/collision-report/form/">Location</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" id="page-driver" href="http://localhost/collision-report/forms/#driverForm">Other Driver</a>
         </li>
         <li class="page-item">
             <a class="page-link" id="page-camera" href="http://localhost/collision-report/forms/#cameraForm">Damages</a>
@@ -40,8 +43,25 @@ include '../header.php';
     </ul>
     </nav>
 
-    <!-- form for the other person involved -->
     <div id="forms" class="d-flex justify-content-center">
+        <!-- form for location of the incident -->
+        <div id="locationForm" class="col-lg-6 col-sm-12">
+            <h2>Location of Incident</h2>
+            <p>Where did the collision take place?</p>
+            <form id="formLocation"  method= "POST">
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control"  name="address"  id= "address" placeholder="e.g. Sesame Street">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control"  name="city" id="city"  placeholder="e.g. Oakville">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="locationSubmit">Continue</button>
+            </form>
+        </div>
+    
+        <!-- form for the other person involved -->
 
         <div id="driverForm" class="col-lg-6 col-sm-12">
             <h2>Other Person(s) Involved</h2>

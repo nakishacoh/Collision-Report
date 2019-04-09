@@ -9,6 +9,18 @@ $( document ).ready(function() {
     var confirmationBtn;
 
     // changing which form shows
+
+    locationBtn = $("#page-location");
+    if (locationBtn){
+        locationBtn.click(function(){
+             $("#locationForm").show();
+             $("#driverForm").hide();
+             $("#notesForm").hide();
+             $("#injuriesForm").hide();
+             $("#confirmationForm").hide();
+        })
+    }
+    
     driverBtn=$("#page-driver");
     if (driverBtn) {
         driverBtn.click(function(){
@@ -109,6 +121,32 @@ function changeForm(e){
     $("#pagination-forms li.active").next("li").find("a").trigger("click");
     console.log("nextform")
 }
+
+//submitting the location of the incident 
+var formLocation= document.getElementById("formLocation");
+var locationSubmitBtn = document.getElementById("locationSubmit")
+    if (locationSubmitBtn){
+        locationSubmitBtn.addEventListener("click",  formLocationFunction, false );
+    };    
+    function formLocationFunction(e){
+        e.preventDefault();
+        var myRequest = new XMLHttpRequest; 
+    
+        myRequest.onreadystatechange = function(){
+            if(myRequest.readyState === 4){
+                // console.log(myRequest.responseText);
+                // var process = JSON.parse(myRequest.responseText);
+            }
+        };
+        var address = document.getElementById("address");
+        var city = document.getElementById("city");
+        
+        myRequest.open("POST", "http://localhost/Collision-Report/form/processes/processing-location.php", true); //true means it is asynchronous // Send urls through the url
+        myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
+        myRequest.send("address=" + address.value + 
+                        "&city=" + city.value); 
+        changeForm();
+    };
 
 // submitting other driver form
 var driverSubmitBtn = document.getElementById("driverSubmit")
