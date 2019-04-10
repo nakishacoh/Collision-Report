@@ -11,8 +11,20 @@ $pdo = new PDO("mysql:host=localhost;dbname=razaalin_collision-report", $dbusern
 
 // prepare insert
 $stmt = $pdo->prepare("
-	INSERT INTO `location` (`locationID`, `address`, `city`)
-	VALUES (NULL, '$address', '$city')");
+	INSERT INTO `reports` (
+	`reportID`, 
+	`userID`, 
+	`address`,
+	`city`,
+	`driverFirstName`,
+	`driverLastName`,
+	`driverPhone`,
+	`image`,
+	`notes`,
+	`date`,
+	`time`,
+	`injuries`)
+	VALUES (NULL, NULL, '$address','$city', NULL,  NULL,  NULL, NULL, NULL, NULL, NULL, NULL)");
 
 // insert into database
 $stmt->execute();

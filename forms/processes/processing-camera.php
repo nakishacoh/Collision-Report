@@ -1,25 +1,39 @@
 <?php
 
-$uploaddir = 'http://localhost/collision-report/forms/images/';
-$uploadfile = $uploaddir . basename($_FILES['image']['name']);
-// if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
-//     header("Location: dashboard.php");
-// } else {
-//     echo "Possible file upload attack!\n";
-// }
-// echo "Here is some more debugging info:";
-// print_r($_FILES);
+$dbusername = "razaalin_alina";
+$dbpassword = "iZKoDeSbtiPLYSGT";
+$pdo = new PDO("mysql:host=localhost;dbname=razaalin_collision-report", $dbusername, $dbpassword);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$image = $uploadfile;
+$image = ($_FILES['fileToUpload']);
+$target_file = NULL;
+$image_url = NULL;
+$root = $_SERVER['DOCUMENT_ROOT'];
 
-$dsn = "mysql:host=localhost;dbname=carsokai_collision_report;charset=utf8mb4";
-$dbusername = "carsokai_imm";
-$dbpassword = "AdpteGfKipeuOuJx";
 
-$pdo = new PDO($dsn, $dbusername, $dbpassword);
+if (isset($_FILES['fileToUpload'])){
+	$target_dir =  '/Collision-Report/form/images/';
+	$target_file = "$root" . "$target_dir" . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+	move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], '/'.$target_file);
+}
 
-$stmt = $pdo->prepare("INSERT INTO `camera` (`cameraID`, `image`) VALUES (NULL,'$image')");
+$image_url = basename($_FILES["fileToUpload"]["name"]);
 
-$stmt->execute();
+
+try {
+
+ $stmt = $pdo->prepare("UPDATE `reports`
+	SET `image` = '$image_url'
+	WHERE reports.`reportID` = 1");
+	$stmt->execute();
+}catch (PDOException $e){
+	throw $e;
+}
 
 ?>
+
+
+
+

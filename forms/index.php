@@ -63,22 +63,24 @@ include '../header.php';
     
         <!-- form for the other person involved -->
 
-        <div id="driverForm" class="col-lg-6 col-sm-12">
+        <div id="driverForm" class="col-lg-6 col-sm-12" >
             <h2>Other Person(s) Involved</h2>
-            <form method="POST" id="formDriver">
+            <form id="formDriver"  method= "POST" >
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control"  name="firstname"  id="firstname" placeholder="e.g. John">
+                    <input type="text" class="form-control"  name="driverFirstName"  id= "driverFirstName" placeholder="e.g. John">
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control"  name="lastname" id="lastname"  placeholder="e.g. Doe">
+                    <input type="text" class="form-control"  name="driverLastName" id="driverLastName"  placeholder="e.g. Doe">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input  type="tel" name="number" class="form-control" id="number" aria-describedby="phoneNumber" placeholder="e.g. 905-123-4321">
+                    <input  type="tel" name="driverPhone" class="form-control" id="driverPhone" aria-describedby="phoneNumber" placeholder="e.g. 905-123-4321">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block" id="driverSubmit">Continue</button>
+                <input  type="hidden" name="reportID" class="form-control" value=1>
+
             </form>
         </div>
 
@@ -86,10 +88,10 @@ include '../header.php';
         <div id="cameraForm" class="col-lg-6 col-sm-12">
             <h2>File Upload</h2>
             <p>Upload images of damages to your car and the other person(s) involved plus their license and registration.</p>
-            <form method="POST" id="formCamera" enctype="multipart/form-data">
+            <form method="POST" id="formCamera" enctype="multipart/form-data" action="http://localhost/collision-report/form/processes/processing-camera.php">
                 <div class="form-group">
                     <label for="image">Image</label>
-                    <input type="file" class="form-control" name="image" id="image">
+                    <input type="file" name="fileToUpload" id="fileToUpload">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block" id="cameraSubmit">Continue</button>
             </form>

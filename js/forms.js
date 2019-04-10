@@ -9,6 +9,15 @@ $( document ).ready(function() {
     var injuriesBtn;
     var confirmationBtn;
 
+    
+    if(window.location.pathname=="/Collision-Report/form/"){
+        $("#locationForm").show();
+        $("#driverForm").hide();
+        $("#notesForm").hide();
+        $('#cameraForm').hide();
+        $("#injuriesForm").hide();
+        $("#confirmationForm").hide();
+    }
     // changing which form shows
 
     locationBtn = $("#page-location");
@@ -155,32 +164,33 @@ var locationSubmitBtn = document.getElementById("locationSubmit")
     };
 
 // submitting other driver form
+var formDriver= document.getElementById("formDriver");
 var driverSubmitBtn = document.getElementById("driverSubmit")
-// if the button is clicked run the function
-if (driverSubmitBtn){
-    driverSubmitBtn.addEventListener("click",  formDriverFunction, false);
-};
-function formDriverFunction(e){
-    // prevent form from submitting automatically
-    e.preventDefault();
-    // connecting
-    var myRequest = new XMLHttpRequest;
-    myRequest.onreadystatechange = function(){
-        if(myRequest.readyState === 4){}
+    if (driverSubmitBtn){
+        driverSubmitBtn.addEventListener("click",  formDriverFunction, false );
+    };    
+    function formDriverFunction(e){
+        e.preventDefault();
+        var myRequest = new XMLHttpRequest; 
+    
+        myRequest.onreadystatechange = function(){
+            if(myRequest.readyState === 4){
+                // console.log(myRequest.responseText);
+                // var process = JSON.parse(myRequest.responseText);
+            }
+        };
+        var driverFirstName = document.getElementById("driverFirstName");
+        var driverLastName = document.getElementById("driverLastName");
+        var driverPhone = document.getElementById("driverPhone");
+        
+        myRequest.open("POST", "http://localhost/Collision-Report/form/processes/processing-otherDriver.php", true); //true means it is asynchronous // Send urls through the url
+        myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
+        myRequest.send("driverFirstName=" + driverFirstName.value + 
+                        "&driverLastName=" + driverLastName.value +
+                        "&driverPhone="+ driverPhone.value); 
+        changeForm();
     };
-    // grab inputs from form
-    var firstname = document.getElementById("firstname");
-    var lastname = document.getElementById("lastname");
-    var number = document.getElementById("number");
-    // send values to the database
-    myRequest.open("POST", "http://localhost/collision-report/forms/processes/processing-other-driver.php", true);
-    myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    myRequest.send("firstname="+firstname.value+
-                    "&lastname="+lastname.value+
-                    "&number="+number.value);
-    // switch user to next section of form
-    changeForm();
-};
+
 
 // submitting camera form
 var cameraSubmitBtn = document.getElementById("cameraSubmit")
